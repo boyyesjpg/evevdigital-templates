@@ -137,7 +137,7 @@
     this.interval = null;
     this.offset   = {};
     this.options  = $.extend({}, defaultOptions);
-    // console.log(this.options);
+    // // log cleared
     // This helper variable is necessary to mimick the previous check for an
     // event listener on this.$el. Because of the event loop there might not
     // be a registered event listener during the first tick. In order to work

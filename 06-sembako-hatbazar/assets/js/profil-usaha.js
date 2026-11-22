@@ -71,5 +71,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${PROFIL_USAHA.nama}!`);
+  // log cleared
 });
