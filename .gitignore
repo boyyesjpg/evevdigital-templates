@@ -6,3 +6,7 @@ _archive_drafts/
 *.log
 .DS_Store
 Thumbs.db
+
+audit-templates.ps1
+audit-report.md
+audit-report.json

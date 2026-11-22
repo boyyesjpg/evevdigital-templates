@@ -16,7 +16,7 @@ const PROFIL_USAHA = {
   // Kontak & WhatsApp
   whatsapp: "62895323418658",
   telepon: "0895-3234-18658",
-  email: "@evevdigital.com",
+  email: "evevdigital@gmail.com",
   pesanWABooking: "Halo evevlaundry, saya ingin pesan antar-jemput cucian saya...",
 
   // Lokasi & Jam Operasional
@@ -119,7 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // 4. Update Header Kontak & Link WhatsApp
-  document.querySelectorAll('a[href*="wa.me"], a.wa-link, .btn-wa-booking, a[href*="contact.html"], a[href*="mail.php"]').forEach((a) => {
+  document.querySelectorAll('a[href*="wa.me"], a.wa-link, .btn-wa-booking, a[href*="contact.html"], a[href*="kontak"]').forEach((a) => {
     // Keep internal section anchors intact
     const currentHref = a.getAttribute("href") || "";
     if (currentHref.startsWith("#") && currentHref.length > 1) return;
@@ -174,5 +174,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${p.nama}!`);
+  // Hydration complete
 });
