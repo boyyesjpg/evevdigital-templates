@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" width="220" height="52">
+  <defs>
+    <linearGradient id="steamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06B6D4" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="bubbleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Water Shield / Droplet & Foam Bubble Icon -->
+  <g transform="translate(4, 3)">
+    <polygon points="23,2 42,12 42,34 23,44 4,34 4,12" fill="url(#bubbleGrad)" rx="2" />
+    <circle cx="23" cy="23" r="13" fill="#0F172A" />
+    <!-- Water Droplet Path -->
+    <path d="M23 14 C23 14 16 23 16 26 C16 30 19 33 23 33 C27 33 30 30 30 26 C30 23 23 14 23 14 Z" fill="url(#steamGrad)" />
+    <!-- Sparkle Foam -->
+    <circle cx="27" cy="19" r="2.5" fill="#FFFFFF" />
+    <circle cx="18" cy="22" r="1.5" fill="#FFFFFF" />
+  </g>
+
+  <!-- Typography: evevsteam -->
+  <text x="56" y="31" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-weight="900" font-size="25" letter-spacing="-0.5">
+    <tspan fill="#06B6D4">evev</tspan><tspan fill="#FFFFFF">steam</tspan>
+  </text>
+  
+  <!-- Subtitle: CUCI STEAM & DETAILING PRO -->
+  <text x="58" y="44" font-family="'Plus Jakarta Sans', 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="8.5" fill="#94A3B8" letter-spacing="2.2">
+    CUCI STEAM &amp; DETAILING PRO
+  </text>
+</svg>

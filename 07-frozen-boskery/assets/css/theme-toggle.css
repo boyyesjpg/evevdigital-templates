@@ -1,0 +1,225 @@
+/* =====================================================================
+   EvEvDigital Dual Theme Engine (Dark & Light Mode) - Sektor 07 Frozen Food
+   ===================================================================== */
+
+:root {
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light Mode (Default) */
+[data-theme="light"], body:not([data-theme="dark"]) {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0fdf4;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+[data-theme="dark"] body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .page-wrapper,
+[data-theme="dark"] .main-header,
+[data-theme="dark"] .header-top,
+[data-theme="dark"] .sticky-header,
+[data-theme="dark"] .banner-section,
+[data-theme="dark"] .services-section,
+[data-theme="dark"] .about-section,
+[data-theme="dark"] .products-section,
+[data-theme="dark"] .pricing-section,
+[data-theme="dark"] .testimonials-section {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .card,
+[data-theme="dark"] .product-card,
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .inner-box {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+[data-theme="dark"] .main-menu .navigation > li > a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .text,
+[data-theme="dark"] span:not(.theme-toggle-btn):not(.btn):not(.badge):not(.footer-maker):not(.footer-maker *) {
+  color: #cbd5e1 !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #38bdf8;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+/* =====================================================================
+   SOLID HIGH-CONTRAST FOOTER (#070A0E) - ANTI BURAM
+   ===================================================================== */
+footer,
+.main-footer,
+.footer-bottom,
+[data-theme="light"] .main-footer,
+[data-theme="light"] .footer-bottom,
+[data-theme="dark"] .main-footer,
+[data-theme="dark"] .footer-bottom {
+  background-color: #070A0E !important;
+  color: #CBD5E1 !important;
+  border-top: 1px solid #1E293B !important;
+}
+
+.main-footer h1, .main-footer h2, .main-footer h3, 
+.main-footer h4, .main-footer h5, .main-footer h6,
+.main-footer .footer-title, .main-footer .widget-title {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+}
+
+.main-footer p, .main-footer span, .main-footer li, 
+.main-footer .text, .footer-bottom p {
+  color: #F1F5F9 !important;
+  opacity: 1 !important;
+}
+
+.main-footer a {
+  color: #94A3B8 !important;
+  transition: color 0.2s ease;
+}
+
+.main-footer a:hover {
+  color: #38BDF8 !important;
+}
+
+/* =====================================================================
+   PHOTO UTILITIES & MODERN UI BADGES
+   ===================================================================== */
+.service-photo {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-photo {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.service-photo:hover, .portfolio-photo:hover {
+  transform: scale(1.03);
+}
+
+.icon-badge-3d {
+  width: 58px;
+  height: 58px;
+  border-radius: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.icon-badge-3d:hover {
+  transform: translateY(-4px) scale(1.08);
+}
+
+.badge-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-pill-primary {
+  background-color: #0284c7;
+  color: #ffffff;
+}
+
+.badge-pill-accent {
+  background-color: #e11d48;
+  color: #ffffff;
+}
+
+/* Floating WhatsApp Button */
+.floating-wa-btn, .wa-floating, .wa-float-pill, .wa-floating-pill {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99999;
+  background-color: #25d366;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.floating-wa-btn:hover, .wa-floating:hover, .wa-float-pill:hover, .wa-floating-pill:hover {
+  background-color: #1eb857;
+  color: #ffffff !important;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.6);
+}
+
+.floating-wa-btn i, .wa-floating i, .wa-float-pill i, .wa-floating-pill i {
+  font-size: 20px;
+}

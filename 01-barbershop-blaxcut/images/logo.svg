@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" width="200" height="48" fill="none">
+  <!-- Barber Pole & Razor Icon -->
+  <g transform="translate(6, 6)">
+    <!-- Barber Pole Cylinder -->
+    <rect x="4" y="4" width="18" height="28" rx="4" fill="#1E293B"/>
+    <!-- Barber Pole Stripes -->
+    <path d="M6 10L18 22M6 18L18 30" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M12 6L20 14M4 22L12 30" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- Top & Bottom Caps Gold -->
+    <rect x="2" y="2" width="22" height="3" rx="1.5" fill="#D4AF37"/>
+    <rect x="2" y="31" width="22" height="3" rx="1.5" fill="#D4AF37"/>
+  </g>
+  <!-- Text Brand -->
+  <text x="38" y="31" font-family="'Plus Jakarta Sans', 'Cinzel', serif" font-weight="900" font-size="24" fill="#FFFFFF" letter-spacing="-0.5">evev<tspan fill="#D4AF37">barber</tspan></text>
+  <text x="39" y="41" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7.5" fill="#94A3B8" letter-spacing="1.5">GENTLEMAN &amp; HAIR STUDIO</text>
+</svg>

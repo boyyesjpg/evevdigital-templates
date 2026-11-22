@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="utf-8">
+    <title>evevbarber - Modern Minimalist & Korean Hair Studio Jakarta Timur</title>
+    <link rel="icon" href="images/icon.png" type="image/gif" sizes="16x16">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Barbershop premium di Jakarta Timur dengan pangkas presisi, cukur silet steril, hot towel, dan styling modern." name="description">
+    <meta content="barbershop jakarta timur, potong rambut pria otista, fade haircut, korean hair salon, beard shave" name="keywords">
+    <meta content="EvEvDigital" name="author">
+
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/mdb.min.css" rel="stylesheet" type="text/css">
+    <link href="css/plugins.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/coloring.css" rel="stylesheet" type="text/css">
+    <link href="css/theme-toggle.css" rel="stylesheet" type="text/css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Theme Color Override -->
+    <style>
+        :root {
+            --primary-color: #3B82F6;
+            --primary-color-rgb: #3B82F6;
+        }
+        .id-color { color: #3B82F6 !important; }
+        .btn-main, a.btn-main { background-color: #3B82F6; color: #111; font-weight: 700; border-radius: 4px; padding: 12px 26px; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-main:hover, a.btn-main:hover { background-color: #fff; color: #111; }
+        .btn-line, a.btn-line { border: 2px solid #3B82F6; color: #fff; font-weight: 700; border-radius: 4px; padding: 10px 24px; text-decoration: none; display: inline-block; transition: all 0.3s; }
+        .btn-line:hover, a.btn-line:hover { background-color: #3B82F6; color: #111; }
+        .de-separator { background: #3B82F6; height: 3px; width: 60px; margin: 15px auto; }
+        .d-sch-table { background: rgba(18, 18, 18, 0.9); border: 1px solid rgba(255,255,255,0.08); padding: 40px; border-radius: 8px; margin-bottom: 30px; }
+        .sc-wrap { margin-top: 25px; }
+        .def-list-dots dl { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; border-bottom: 1px dotted rgba(255,255,255,0.15); padding-bottom: 6px; }
+        .def-list-dots dt { font-weight: 600; font-size: 16px; color: #fff; }
+        .def-list-dots dd { font-weight: 700; font-size: 16px; color: #3B82F6; margin: 0; }
+        .footer-credential-box { padding: 25px 0; border-top: 1px solid rgba(255,255,255,0.08); margin-top: 30px; font-size: 14px; color: #94a3b8; }
+        .credential-pill { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 10px 18px; border-radius: 8px; display: inline-flex; align-items: center; gap: 10px; margin: 5px; }
+    </style>
+</head>
+<body class="dark-scheme">
+<div id="wrapper">
+
+        <!-- header begin -->
+        <header class="header-center transparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- logo begin -->
+                        <div id="logo-center">
+                            <a href="template-2.html">
+                                <img class="logo-main" src="images/logo.png" alt="evevbarber" style="max-height: 38px;">
+                                <img class="logo-mobile" src="images/logo-mobile.png" alt="evevbarber" style="max-height: 32px;">
+                            </a>
+                        </div>
+                        <!-- logo close -->
+                        <div class="de-flex sm-pt10">
+                            <div class="de-flex-col">
+                                <ul id="mainmenu" class="s2">
+                                    <li><a href="#hero">Studio</a></li>
+                                    <li><a href="#trending">Koleksi Gaya</a></li>
+                                    <li><a href="#team">Stylist Kami</a></li>
+                                    <li><a href="#booking">Booking Online</a></li>
+                                    <li><a href="#location">Jam &amp; Lokasi</a></li>
+                                </ul>
+                            </div>
+                            <div class="de-flex-col">
+                                <div class="menu_side_area">
+                                    <button id="theme-toggle" class="theme-toggle-btn" type="button" title="Ganti Mode Gelap/Terang" aria-label="Toggle Theme">
+                                        <i class="fa fa-sun-o"></i>
+                                    </button>
+                                    <a href="#booking" class="btn-main" style="background: #3B82F6; color: #fff;">Reservasi Slot</a>
+                                    <span id="menu-btn"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+    
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- Studio Hero Section -->
+            <section id="hero" class="jarallax no-top no-bottom v-center" style="min-height: 90vh; display: flex; align-items: center;">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/3.jpg" class="jarallax-img" alt="Korean Men Hair Studio">
+                <div class="container relative z1000">
+                    <div class="row align-items-center">
+                        <div class="col-lg-7">
+                            <div class="spacer-single"></div>
+                            <span class="p-title" style="color: #3B82F6; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">KOREAN &amp; MODERN MEN'S HAIR STUDIO</span>
+                            <h1 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 46px; font-weight: 800; line-height: 1.2; margin-top: 15px;">Two-Block, Comma Hair, Down Perm &amp; Textured Men's Trend</h1>
+                            <p class="lead" style="color: #e2e8f0; margin-bottom: 30px;">Studio rambut pria kontemporer di Jakarta Timur. Pangkas tekstur modern sesuai proporsi rahang Asia, atasi rambut samping mengembang dengan Korean Down Perm, dan konsultasi warna rambut estetik.</p>
+                            <div>
+                                <a href="#trending" class="btn-main" style="background: #3B82F6; color: #fff;">Lihat Tren Gaya Rambut</a>
+                                &nbsp;
+                                <a href="#booking" class="btn-line" style="border-color: #3B82F6; color: #fff;">Pilih Slot &amp; Barber</a>
+                            </div>
+                            <div class="spacer-single"></div>
+                        </div>
+                        <div class="col-lg-5 text-center">
+                            <img src="images/misc/man-2.png" alt="Modern Hair Model" style="max-height: 540px; filter: drop-shadow(0 20px 30px rgba(0,0,0,0.8));">
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- Marquee Section -->
+            <section aria-label="section" class="no-top no-bottom" style="background: #0f172a; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08);">
+                <div class="wow fadeInRight d-flex">
+                    <div class="de-marquee-list wow">
+                        <div class="d-item">
+                            <span class="d-item-txt"><i class="fa fa-fire" style="color: #3B82F6;"></i> KOREAN DOWN PERM SPECIALIST</span>
+                            <span class="d-item-display"><i class="d-item-dot"></i></span>
+                            <span class="d-item-txt"><i class="fa fa-check" style="color: #3B82F6;"></i> TWO-BLOCK TEXTURED CUT</span>
+                            <span class="d-item-display"><i class="d-item-dot"></i></span>
+                            <span class="d-item-txt"><i class="fa fa-sparkles" style="color: #3B82F6;"></i> COMMA HAIR &amp; CURTAIN BANGS</span>
+                            <span class="d-item-display"><i class="d-item-dot"></i></span>
+                            <span class="d-item-txt"><i class="fa fa-tint" style="color: #3B82F6;"></i> ASH GREY &amp; ICE BLONDE COLORING</span>
+                            <span class="d-item-display"><i class="d-item-dot"></i></span>
+                            <span class="d-item-txt"><i class="fa fa-scissors" style="color: #3B82F6;"></i> FRENCH TEXTURED CROP</span>
+                            <span class="d-item-display"><i class="d-item-dot"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section Trending Styles Carousel -->
+            <section id="trending" class="pt80" style="padding: 90px 0;">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <span class="p-title" style="color: #3B82F6; font-weight: 800; letter-spacing: 2px;">LOOKBOOK 2026</span>
+                            <h2 style="font-size: 38px; font-weight: 800;">Koleksi Tren Gaya Rambut Pria Asia</h2>
+                            <div class="de-separator" style="background: #3B82F6;"></div>
+                            <p class="lead" style="color: #94a3b8;">Geser untuk melihat model potongan favorit anak muda, mahasiswa, dan profesional muda di Jakarta Timur.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="d-carousel">
+                                <div id="item-carousel-big" class="owl-carousel no-hide owl-center">
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Two-Block Cut &amp; Texture</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#01</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/1.jpg" class="lazy img-fluid" alt="Two Block Cut">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Comma Hair Aesthetic</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#02</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/2.jpg" class="lazy img-fluid" alt="Comma Hair">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Korean Down Perm (Anti Jabrik)</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#03</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/3.jpg" class="lazy img-fluid" alt="Down Perm">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Textured French Crop</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#04</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/4.jpg" class="lazy img-fluid" alt="French Crop">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Modern Soft Mullet &amp; Taper</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#05</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/5.jpg" class="lazy img-fluid" alt="Modern Mullet">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="c-item">
+                                        <a href="#booking">
+                                            <span class="c-item_info">
+                                                <span class="c-item_title">Shadow Wave Perm for Men</span>
+                                                <span class="c-item_wm" style="color: #3B82F6;">#06</span>
+                                            </span>
+                                            <div class="c-item_wrap">
+                                                <img src="images/hairstyles/6.jpg" class="lazy img-fluid" alt="Wave Perm">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stylist Team Showcase -->
+            <section id="team" class="no-top jarallax" style="padding: 90px 0;">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/8.jpg" class="jarallax-img" alt="Master Stylists">
+                <div class="container relative z1000">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <span class="p-title" style="color: #3B82F6; font-weight: 800; letter-spacing: 2px;">TIM STYLIST KAMI</span>
+                            <h2 style="font-size: 38px; font-weight: 800;">Barber &amp; Stylist Bersertifikasi</h2>
+                            <div class="de-separator" style="background: #3B82F6;"></div>
+                            <p class="lead" style="color: #94a3b8;">Setiap stylist memiliki keahlian khusus dalam menangani jenis rambut Asia yang lurus kaku, ikal, maupun tebal.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+
+                    <div class="row gx-5 align-items-center mb-5">
+                        <div class="col-lg-5 offset-lg-1 text-center" data-jarallax-element="-20">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/team/1.jpg" alt="Aldi Pratama" style="border-radius: 8px;">
+                                </div>
+                            </div>
+                            <div class="spacer-20"></div>
+                        </div>
+                        <div class="col-lg-5">
+                            <span style="color: #3B82F6; font-weight: 700; font-size: 13px; text-transform: uppercase;">CREATIVE DIRECTOR</span>
+                            <h2 style="font-size: 32px; font-weight: 800; margin-top: 5px;">Aldi Pratama</h2>
+                            <p style="color: #cbd5e1; line-height: 1.7;">Spesialis tren pangkas Korea dan Two-Block Cut. Telah mendalami teknik penataan rambut modern selama 9 tahun, memahami presisi sudut potong agar rambut jatuh natural tanpa perlu ditata berlebihan setiap pagi.</p>
+                            <div class="credential-pill" style="border-color: rgba(59, 130, 246, 0.4);">
+                                <i class="fa fa-scissors" style="color: #3B82F6;"></i>
+                                <span style="color: #fff; font-size: 13px;">Spesialisasi: Two-Block, Comma Hair, Face Geometry</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-5 order-lg-1 order-2 offset-lg-1">
+                            <span style="color: #3B82F6; font-weight: 700; font-size: 13px; text-transform: uppercase;">SENIOR TEXTURE &amp; PERM MASTER</span>
+                            <h2 style="font-size: 32px; font-weight: 800; margin-top: 5px;">Rian Sanjaya</h2>
+                            <p style="color: #cbd5e1; line-height: 1.7;">Ahli formulasi perming pria dan Korean Down Perm. Menguasai solusi rambut samping kaku 'jabrik' yang sering dialami pria Indonesia, mengubahnya menjadi ramping rapi dan mudah diatur.</p>
+                            <div class="credential-pill" style="border-color: rgba(59, 130, 246, 0.4);">
+                                <i class="fa fa-magic" style="color: #3B82F6;"></i>
+                                <span style="color: #fff; font-size: 13px;">Spesialisasi: Korean Down Perm, Textured French Crop</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 order-lg-2 order-1 text-center" data-jarallax-element="-20">
+                            <div class="de-box-a">
+                                <div class="d-image">
+                                    <img src="images/team/2.jpg" alt="Rian Sanjaya" style="border-radius: 8px;">
+                                </div>
+                            </div>
+                            <div class="spacer-20"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+
+            <!-- Interactive Booking Wizard Section -->
+            <section id="booking" class="no-top" style="padding: 90px 0;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 offset-lg-2 text-center">
+                            <span class="p-title" style="color: #3B82F6; font-weight: 800; letter-spacing: 2px;">RESERVASI DIGITAL</span>
+                            <h2 style="font-size: 38px; font-weight: 800;">Pesan Kursi &amp; Pilih Stylist Favorit</h2>
+                            <div class="de-separator" style="background: #3B82F6;"></div>
+                            <p class="lead" style="color: #94a3b8;">Isi formulir di bawah ini untuk mengunci jadwal tanpa antre panjang di lokasi.</p>
+                            <div class="spacer-single"></div>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-9">
+                            <div style="background: #141721; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
+                                <form id="form_sb" class="form-border" method="post">
+                                    <div class="row g-4">
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-user" style="color: #3B82F6;"></i> Nama Lengkap Pelanggan:</label>
+                                            <input type="text" name="name" id="name" class="form-control" placeholder="Contoh: Budi Santoso" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-phone" style="color: #3B82F6;"></i> Nomor WhatsApp Aktif:</label>
+                                            <input type="tel" name="phone" id="phone" class="form-control" placeholder="08xxxxxxxxxx" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-scissors" style="color: #3B82F6;"></i> Pilih Menu Layanan:</label>
+                                            <select name="service" id="service" class="form-control" style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                                <option value="Korean Two-Block & Styling (Rp 75.000)">Korean Two-Block &amp; Styling — Rp 75.000</option>
+                                                <option value="Comma Hair & Textured Crop (Rp 75.000)">Comma Hair &amp; Textured Crop — Rp 75.000</option>
+                                                <option value="Paket Korean Down Perm + Haircut (Rp 160.000)">Paket Korean Down Perm + Haircut — Rp 160.000</option>
+                                                <option value="Shadow Perm / Wave Perm Pria (Rp 220.000)">Shadow Perm / Wave Perm Pria — Rp 220.000</option>
+                                                <option value="Bleaching & Ash Grey Color (Rp 150.000)">Bleaching &amp; Ash Grey Color — Rp 150.000</option>
+                                                <option value="Gentleman Signature Haircut (Rp 70.000)">Gentleman Signature Haircut — Rp 70.000</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-id-badge" style="color: #3B82F6;"></i> Pilihan Stylist:</label>
+                                            <select name="stylist" id="stylist" class="form-control" style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                                <option value="Aldi Pratama (Korean Style Director)">Aldi Pratama (Korean Style Director)</option>
+                                                <option value="Rian Sanjaya (Texture & Perm Master)">Rian Sanjaya (Texture &amp; Perm Master)</option>
+                                                <option value="Siapa Saja yang Siap (Walk-in Cepat)">Siapa Saja yang Siap (Walk-in Cepat)</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-calendar" style="color: #3B82F6;"></i> Rencana Tanggal Datang:</label>
+                                            <input type="date" name="date" id="date" class="form-control" required style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label style="color: #fff; font-weight: 600; margin-bottom: 8px;"><i class="fa fa-clock-o" style="color: #3B82F6;"></i> Estimasi Jam Datang:</label>
+                                            <select name="time" id="time" class="form-control" style="background: #1e293b; border: 1px solid rgba(255,255,255,0.15); color: #fff; padding: 12px 16px; border-radius: 6px;">
+                                                <option value="10:30">10:30 WIB</option>
+                                                <option value="12:00">12:00 WIB</option>
+                                                <option value="14:00">14:00 WIB</option>
+                                                <option value="16:00">16:00 WIB</option>
+                                                <option value="18:30">18:30 WIB</option>
+                                                <option value="20:00">20:00 WIB</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-12 text-center" style="margin-top: 25px;">
+                                            <button type="submit" class="btn-main w-100" style="background: #3B82F6; color: #fff; font-size: 16px; padding: 14px 20px;">
+                                                <i class="fa fa-whatsapp"></i> Konfirmasi Booking via WhatsApp Langsung
+                                            </button>
+                                            <span style="font-size: 12px; color: #94a3b8; display: block; margin-top: 10px;">*Sistem otomatis mengarahkan ke WhatsApp resmi evevbarber tanpa perlu kartu kredit.</span>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Location & Studio Card -->
+            <section id="location" class="no-top jarallax" style="padding: 90px 0;">
+                <div class="de-gradient-edge-top"></div>
+                <img src="images/background/9.jpg" class="jarallax-img" alt="Studio Lokasi">
+                <div class="container relative z1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <div style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 12px; padding: 45px;">
+                                <span class="p-title" style="color: #3B82F6; font-weight: 800; letter-spacing: 2px;">KUNJUNGI KAMI</span>
+                                <h2 style="font-size: 34px; font-weight: 800;">Studio evevbarber Otista Raya</h2>
+                                <div class="de-separator" style="background: #3B82F6;"></div>
+                                <p style="color: #e2e8f0; font-size: 17px; margin-bottom: 25px;">Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur (Dekat Halte &amp; Akses Mudah Parkir Mobil/Motor)</p>
+                                <div class="row g-3 justify-content-center text-start mb-4">
+                                    <div class="col-md-5">
+                                        <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
+                                            <span style="color: #94a3b8; font-size: 12px; display: block;">JAM OPERASIONAL STUDIO:</span>
+                                            <strong style="color: #fff; font-size: 15px;">Setiap Hari: 10:00 - 21:00 WIB</strong>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px;">
+                                            <span style="color: #94a3b8; font-size: 12px; display: block;">KONTAK WA &amp; EMAIL:</span>
+                                            <strong style="color: #3B82F6; font-size: 15px;">WA: 0895-3234-18658</strong><br>
+                                            <span style="color: #94a3b8; font-size: 13px;">evevdigital@gmail.com</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="https://maps.google.com/?q=Jl.+Otista+Raya+No.+88+Jatinegara+Jakarta+Timur" target="_blank" class="btn-main" style="background: #3B82F6; color: #fff;">Petunjuk Arah Google Maps</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-gradient-edge-bottom"></div>
+            </section>
+        </div>
+    
+        <!-- footer begin -->
+        <footer style="background: #080d1a; padding: 60px 0 30px; border-top: 1px solid rgba(59, 130, 246, 0.2);">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-4 text-lg-start text-center">
+                        <img src="images/logo.png" alt="evevbarber" style="max-height: 40px;">
+                        <p style="color: #94a3b8; font-size: 13.5px; margin-top: 15px;">Studio rambut modern &amp; spesialis tren potongan Korea pertama di Jatinegara Jakarta Timur.</p>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <div class="social-icons">
+                            <a href="https://wa.me/62895323418658" target="_blank"><i class="fa fa-whatsapp fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-instagram fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-tiktok fa-lg"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play fa-lg"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-lg-end text-center">
+                        <span style="color: #fff; font-size: 14px; font-weight: 700; display: block;">evevbarber Hair Studio</span>
+                        <span style="color: #94a3b8; font-size: 13px;">Jl. Otista Raya No. 88, Jatinegara</span><br>
+                        <span style="color: #3B82F6; font-size: 13px; font-weight: 700;">WA: 0895-3234-18658</span>
+                    </div>
+                </div>
+
+                <div class="footer-credential-box text-center">
+                    <div class="credential-pill">
+                        <i class="fa fa-map-marker" style="color: #3B82F6;"></i>
+                        <span>Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</span>
+                    </div>
+                    <div class="credential-pill">
+                        <i class="fa fa-phone" style="color: #3B82F6;"></i>
+                        <span>0895-3234-18658</span>
+                    </div>
+                    <div class="credential-pill">
+                        <i class="fa fa-envelope" style="color: #3B82F6;"></i>
+                        <span>evevdigital@gmail.com</span>
+                    </div>
+                    <div class="credential-pill">
+                        <i class="fa fa-clock-o" style="color: #3B82F6;"></i>
+                        <span>Setiap Hari: 10:00 - 21:00 WIB</span>
+                    </div>
+                    <div style="margin-top: 20px; font-size: 13px; color: #64748b;">
+                        &copy; 2026 evevbarber (EvEvDigital). Seluruh Hak Cipta Dilindungi.
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer close -->
+    
+    </div>
+    <!-- Scripts -->
+    <script src="js/plugins.js"></script>
+    <script src="js/designesia.js"></script>
+    <script src="js/custom-marquee.js"></script>
+    <script src="js/profil-usaha.js"></script>
+    <script src="js/theme-toggle.js"></script>
+    
+<!-- Floating Template Switcher Bar -->
+<div id="evev-template-switcher" style="position: fixed; bottom: 25px; left: 50%; transform: translateX(-50%); z-index: 99999; background: rgba(15, 23, 42, 0.95); backdrop-filter: blur(12px); padding: 8px 14px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.18); display: flex; align-items: center; gap: 8px; font-family: 'Plus Jakarta Sans', sans-serif;">
+    <span style="color: #D4AF37; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; padding: 0 6px;">PILIH TEMPLATE:</span>
+    <a href="template-1.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">1. Classic Lounge</a>
+    <a href="template-2.html" class="switcher-pill active" style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: #3B82F6; color: #FFFFFF;">2. Modern Korean Studio</a>
+    <a href="template-3.html" class="switcher-pill " style="padding: 7px 15px; border-radius: 30px; font-size: 12px; font-weight: 700; text-decoration: none; transition: all 0.2s ease; background: rgba(255,255,255,0.08); color: #CBD5E1;">3. Vintage Fade Specialist</a>
+</div>
+
+    
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/62895323418658?text=Halo%20evevbarber,%20saya%20ingin%20booking%20antrean%20potong%20rambut" target="_blank" rel="noopener noreferrer" style="position: fixed; bottom: 25px; right: 25px; z-index: 99999; background: #25D366; color: white; border-radius: 50px; padding: 12px 22px; display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; text-decoration: none; box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); font-family: 'Plus Jakarta Sans', sans-serif; transition: transform 0.2s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    <i class="fa fa-whatsapp" style="font-size: 22px;"></i>
+    <span>Booking Antrean WA</span>
+</a>
+
+</body>
+</html>

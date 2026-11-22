@@ -1,0 +1,359 @@
+/* ==========================================================================
+   🌓 EvEvDigital Dual Theme Engine (Dark & Light Mode for Cuci Steam & Detailing)
+   ========================================================================== */
+
+/* Smooth Transition across the page */
+body, 
+.ltn__header-area, 
+.ltn__header-middle-area,
+.ltn__header-top-area,
+.ltn__main-menu,
+.ltn__feature-item,
+.ltn__service-item,
+.ltn__pricing-plan-item,
+.ltn__appointment-inner,
+.ltn__testimonial-item,
+.ltn__blog-item,
+.ltn__footer-area,
+.ltn__copyright-area,
+footer,
+p, h1, h2, h3, h4, h5, h6 {
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease !important;
+}
+
+/* ==========================================================================
+   🌙 DARK THEME ([data-theme="dark"])
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --ltn__primary-color: #f1f5f9;
+  --ltn__heading-color: #f8fafc;
+  --ltn__paragraph-color: #94a3b8;
+  --section-bg-1: #0a0e14;
+  --section-bg-2: #070a0e;
+  --border-color-1: rgba(255, 255, 255, 0.1);
+  --border-color-8: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] body {
+  background-color: #0b0f15 !important;
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .section-bg-1,
+[data-theme="dark"] .ltn__section-bg-1 {
+  background-color: #0b0f15 !important;
+}
+
+[data-theme="dark"] .ltn__header-top-area {
+  background-color: #070a0f !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .ltn__header-middle-area,
+[data-theme="dark"] .sticky-active.ltn__sticky {
+  background-color: #0e141c !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .ltn__main-menu > ul > li > a {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .ltn__feature-item,
+[data-theme="dark"] .ltn__service-item,
+[data-theme="dark"] .ltn__pricing-plan-item,
+[data-theme="dark"] .ltn__appointment-inner,
+[data-theme="dark"] .ltn__testimonial-item,
+[data-theme="dark"] .ltn__blog-item {
+  background-color: #121822 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .ltn__pricing-plan-item .pricing-title,
+[data-theme="dark"] .ltn__feature-item h3 a,
+[data-theme="dark"] .ltn__service-item h3 a,
+[data-theme="dark"] .section-title {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .ltn__pricing-plan-item ul li {
+  color: #cbd5e1 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .input-item input,
+[data-theme="dark"] .input-item textarea,
+[data-theme="dark"] .input-item select,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #0e141c !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] ::placeholder {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] .ltn__footer-area {
+  background-color: #06090d !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .ltn__copyright-area {
+  background-color: #040609 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+[data-theme="dark"] .ltn__utilize-mobile-menu {
+  background-color: #0c1017 !important;
+}
+
+[data-theme="dark"] .ltn__utilize-menu ul li a {
+  color: #f1f5f9 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ==========================================================================
+   ☀️ LIGHT THEME ([data-theme="light"])
+   ========================================================================== */
+[data-theme="light"] {
+  color-scheme: light;
+  --ltn__primary-color: #071c1f;
+  --ltn__heading-color: #071c1f;
+  --ltn__paragraph-color: #525763;
+  --section-bg-1: #F2F6F7;
+  --section-bg-2: #071c1f;
+  --border-color-1: #e5eaee;
+}
+
+[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #525763 !important;
+}
+
+[data-theme="light"] .ltn__feature-item,
+[data-theme="light"] .ltn__service-item,
+[data-theme="light"] .ltn__pricing-plan-item {
+  background-color: #ffffff !important;
+  border: 1px solid #eef2f6 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ==========================================================================
+   🔘 THEME TOGGLE BUTTON & FLOATING ACTIONS
+   ========================================================================== */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(229, 62, 41, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  border-color: #e53e29;
+  background: #e53e29;
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(229, 62, 41, 0.4);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #f1f4f8;
+  color: #071c1f;
+  border-color: #d1d9e2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: #e53e29;
+  color: #ffffff;
+  border-color: #e53e29;
+}
+
+.theme-toggle-btn svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:active svg {
+  transform: rotate(45deg);
+}
+
+/* Floating WhatsApp Quick Pill */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+  animation: waPulse 2.8s infinite;
+}
+
+.floating-wa-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #ffffff !important;
+}
+
+.floating-wa-btn i, 
+.floating-wa-btn svg {
+  font-size: 20px;
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-wa-btn span {
+    display: none;
+  }
+  .floating-wa-btn {
+    padding: 14px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+  }
+}
+
+/* EvEvDigital Official Footer Branding */
+.footer-maker {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+.footer-maker b {
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   🔒 HIGH CONTRAST FOOTER & SERVICE CARD STYLING (Solid #070A0E, No Blur)
+   ========================================================================== */
+.ltn__footer-area,
+.footer-top-area,
+.ltn__copyright-area {
+  background-color: #070A0E !important;
+}
+
+.ltn__footer-area p,
+.ltn__footer-area li,
+.ltn__footer-area span,
+.ltn__footer-area .footer-address li,
+.ltn__footer-widget p,
+.ltn__footer-widget li,
+.footer-about-widget p {
+  color: #F1F5F9 !important;
+  opacity: 1 !important;
+  font-weight: 400;
+}
+
+.ltn__footer-area h4,
+.ltn__footer-widget .footer-title,
+.ltn__footer-area .footer-title {
+  color: #FFFFFF !important;
+  opacity: 1 !important;
+  font-weight: 700;
+}
+
+.ltn__footer-area a,
+.footer-menu li a,
+.ltn__footer-widget a {
+  color: #E2E8F0 !important;
+  opacity: 1 !important;
+  transition: color 0.2s ease;
+}
+
+.ltn__footer-area a:hover,
+.footer-menu li a:hover,
+.ltn__footer-widget a:hover {
+  color: #06B6D4 !important;
+}
+
+.ltn__copyright-area,
+.ltn__copyright-area p,
+.ltn__copyright-area a,
+.ltn__copyright-area span {
+  color: #94A3B8 !important;
+  opacity: 1 !important;
+}
+.ltn__copyright-area a:hover {
+  color: #FFFFFF !important;
+}
+
+/* Service Card Photos & 3D Icons */
+.service-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.service-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.ltn__service-item:hover .service-photo {
+  transform: scale(1.04);
+}
+.icon-3d {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+  margin-bottom: 12px;
+}
+
+/* Suppress Duplicate Floating WA Elements */
+.wa-floating, .wa-float-pill {
+  display: none !important;
+}
+

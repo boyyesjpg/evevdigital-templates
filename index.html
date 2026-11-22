@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvEvDigital — Showcase 30 Template Website UMKM Modern &amp; Interaktif</title>
+    <meta name="description" content="Showcase 30 Template Website UMKM Indonesia terlengkap mencakup 10 sektor bisnis lokal dengan integrasi WhatsApp booking dan arsitektur visual responsif.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-dark: #0B0F19;
+            --bg-card: rgba(18, 24, 38, 0.7);
+            --border-card: rgba(255, 255, 255, 0.08);
+            --accent-cyan: #06B6D4;
+            --accent-blue: #3B82F6;
+            --accent-gold: #F59E0B;
+            --text-main: #F8FAFC;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Ambient Glow */
+        .ambient-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.12) 0%, rgba(59, 130, 246, 0.04) 50%, transparent 70%);
+            top: -150px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Navbar */
+        header {
+            padding: 24px 0;
+            border-bottom: 1px solid var(--border-card);
+            backdrop-filter: blur(16px);
+            background: rgba(11, 15, 25, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-logo span {
+            color: var(--accent-cyan);
+        }
+
+        .badge-live {
+            background: rgba(6, 182, 212, 0.15);
+            color: var(--accent-cyan);
+            border: 1px solid rgba(6, 182, 212, 0.3);
+            font-size: 11px;
+            padding: 4px 10px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-wa-header {
+            background: #25D366;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-wa-header:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+        }
+
+        /* Hero */
+        .hero {
+            padding: 70px 0 50px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #E2E8F0;
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-title span {
+            background: linear-gradient(135deg, #06B6D4 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            color: var(--text-muted);
+            max-width: 760px;
+            margin: 0 auto 36px;
+        }
+
+        /* Stats Bar */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            padding: 24px;
+            border-radius: 16px;
+            backdrop-filter: blur(12px);
+            max-width: 860px;
+            margin: 0 auto 50px;
+        }
+
+        .stat-item h3 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fff;
+            margin-bottom: 2px;
+        }
+
+        .stat-item p {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Filter Pills */
+        .filters {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-muted);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 13.5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--accent-cyan);
+            color: #0F172A;
+            border-color: var(--accent-cyan);
+        }
+
+        /* Sector Cards Grid */
+        .sector-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 28px;
+            margin-bottom: 80px;
+        }
+
+        @media (max-width: 992px) {
+            .sector-grid { grid-template-columns: 1fr; }
+            .hero-title { font-size: 36px; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        }
+
+        .sector-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-card);
+            border-radius: 20px;
+            padding: 32px;
+            backdrop-filter: blur(16px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sector-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(6, 182, 212, 0.4);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .sector-badge {
+            font-size: 12px;
+            font-weight: 800;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(6, 182, 212, 0.1);
+            padding: 4px 12px;
+            border-radius: 50px;
+        }
+
+        .sector-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: var(--accent-cyan);
+        }
+
+        .sector-title {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .sector-tagline {
+            font-size: 14.5px;
+            color: var(--text-muted);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .template-pills-box {
+            background: rgba(11, 15, 25, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 24px;
+        }
+
+        .template-pills-label {
+            font-size: 11px;
+            font-weight: 800;
+            color: #64748B;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .pills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .pill-link {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 8px;
+            padding: 10px 14px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #CBD5E1;
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+
+        .pill-link:hover {
+            background: rgba(6, 182, 212, 0.12);
+            color: #fff;
+            border-color: var(--accent-cyan);
+            transform: translateX(4px);
+        }
+
+        .pill-tag {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            background: rgba(6, 182, 212, 0.15);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .card-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .btn-launch {
+            flex: 1;
+            background: var(--accent-cyan);
+            color: #0F172A;
+            text-align: center;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .btn-launch:hover {
+            opacity: 0.9;
+        }
+
+        .btn-folder {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #CBD5E1;
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-folder:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border-card);
+            padding: 60px 0 40px;
+            background: rgba(8, 12, 20, 0.95);
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+
+        .footer-brand h4 {
+            color: #fff;
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ambient-glow"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-inner">
+            <a href="#" class="brand-logo">
+                <i class="fa-solid fa-shapes" style="color: var(--accent-cyan);"></i>
+                evev<span>digital</span>
+            </a>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <span class="badge-live"><i class="fa-solid fa-circle" style="font-size: 8px; margin-right: 4px;"></i> 30 Live Templates</span>
+                <a href="https://wa.me/62895323418658?text=Halo%20EvEvDigital,%20saya%20tertarik%20dengan%20koleksi%20template%20website%20UMKM" target="_blank" class="btn-wa-header">
+                    <i class="fa-brands fa-whatsapp"></i> 0895-3234-18658
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-badge">
+                <i class="fa-solid fa-fire" style="color: #F59E0B;"></i>
+                SHOWCASE RESMI 10 SEKTOR UMKM LOKAL INDONESIA
+            </div>
+            <h1 class="hero-title">
+                Katalog <span>30 Template Website UMKM</span><br>Interaktif, Elegan &amp; Siap Pakai
+            </h1>
+            <p class="hero-desc">
+                Dirancang khusus untuk 10 sektor riil bisnis lokal Indonesia. Setiap sektor memiliki 3 variasi arsitektur visual &amp; model bisnis yang berbeda, bebas teks Latin/dummy, terintegrasi WhatsApp booking langsung, dan responsive di semua gadget.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>10</h3>
+                    <p>Sektor Bisnis Riil</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30</h3>
+                    <p>Variasi Template Unik</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>Bahasa Indonesia</p>
+                </div>
+                <div class="stat-item">
+                    <h3>0</h3>
+                    <p>Broken Assets</p>
+                </div>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterSectors('all')">Semua Sektor (10)</button>
+                <button class="filter-btn" onclick="filterSectors('otomotif')">Otomotif &amp; Kendaraan (3)</button>
+                <button class="filter-btn" onclick="filterSectors('lifestyle')">Jasa &amp; Lifestyle (3)</button>
+                <button class="filter-btn" onclick="filterSectors('sembako')">Pangan &amp; Bahan Pokok (2)</button>
+                <button class="filter-btn" onclick="filterSectors('industri')">Percetakan &amp; Servis (2)</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sector Cards -->
+    <main class="container">
+        <div class="sector-grid" id="sectorCards">
+
+            <!-- 1. BARBERSHOP -->
+            <div class="sector-card" data-category="lifestyle">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 01 — BARBERSHOP</span>
+                        <div class="sector-icon"><i class="fa-solid fa-scissors"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevbarber</h2>
+                    <p class="sector-tagline">Barbershop modern &amp; ritual grooming pria maskulin dengan potongan presisi, hot towel shave steril, dan penataan rambut kontemporer.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="01-barbershop-blaxcut/template-1.html" class="pill-link">
+                                <span>1. Classic Gentleman Lounge &amp; Club</span>
+                                <span class="pill-tag">Executive Gold</span>
+                            </a>
+                            <a href="01-barbershop-blaxcut/template-2.html" class="pill-link">
+                                <span>2. Modern Korean &amp; Minimalist Men's Studio</span>
+                                <span class="pill-tag">Booking Wizard</span>
+                            </a>
+                            <a href="01-barbershop-blaxcut/template-3.html" class="pill-link">
+                                <span>3. Vintage Street Barbershop &amp; Fade Specialist</span>
+                                <span class="pill-tag">Wall of Fame</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="01-barbershop-blaxcut/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="01-barbershop-blaxcut/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 2. BENGKEL -->
+            <div class="sector-card" data-category="otomotif">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 02 — BENGKEL OTOMOTIF</span>
+                        <div class="sector-icon"><i class="fa-solid fa-wrench"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevbengkel</h2>
+                    <p class="sector-tagline">Pusat servis motor &amp; mobil modern dengan scanner diagnostik injeksi OBD-2, teknisi bersertifikat, dan oli original bergaransi resmi.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="02-bengkel-fixturbo/template-1.html" class="pill-link">
+                                <span>1. Pitstop Express 15 Menit &amp; Ganti Oli Bebas Antre</span>
+                                <span class="pill-tag">Express Red</span>
+                            </a>
+                            <a href="02-bengkel-fixturbo/template-2.html" class="pill-link">
+                                <span>2. Spesialis Servis CVT Matic &amp; Anti Gredeg</span>
+                                <span class="pill-tag">Skutik Tech</span>
+                            </a>
+                            <a href="02-bengkel-fixturbo/template-3.html" class="pill-link">
+                                <span>3. Diagnostik Scanner OBD-2 &amp; Dyno Tuning</span>
+                                <span class="pill-tag">High Performance</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="02-bengkel-fixturbo/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="02-bengkel-fixturbo/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 3. CUCI STEAM -->
+            <div class="sector-card" data-category="otomotif">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 03 — CUCI STEAM &amp; DETAILING</span>
+                        <div class="sector-icon"><i class="fa-solid fa-car-wash"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevsteam</h2>
+                    <p class="sector-tagline">Cuci steam hidrolik H-Track 150 bar, snow wash pH netral, salon detailing interior, dan aplikasi Nano Ceramic Coating 9H bergaransi.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="03-cuci-steam-autixir/template-1.html" class="pill-link">
+                                <span>1. Cuci Salju Hidrolik Bersih Kolong Bebas Baret</span>
+                                <span class="pill-tag">Snow Wash</span>
+                            </a>
+                            <a href="03-cuci-steam-autixir/template-2.html" class="pill-link">
+                                <span>2. Express Waterless &amp; Hydrophobic Ceramic Wax</span>
+                                <span class="pill-tag">Wet-Look</span>
+                            </a>
+                            <a href="03-cuci-steam-autixir/template-3.html" class="pill-link">
+                                <span>3. Studio Auto Detailing, Paint Correction &amp; Fogging</span>
+                                <span class="pill-tag">Coating 9H</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="03-cuci-steam-autixir/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="03-cuci-steam-autixir/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 4. LAUNDRY -->
+            <div class="sector-card" data-category="lifestyle">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 04 — JASA LAUNDRY</span>
+                        <div class="sector-icon"><i class="fa-solid fa-shirt"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevlaundry</h2>
+                    <p class="sector-tagline">Jasa cuci kiloan express 3 jam selesai, dry cleaning pakaian premium jas &amp; kebaya, serta laundromat koin self-service modern.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="04-laundry-purelinen/template-1.html" class="pill-link">
+                                <span>1. Laundry Express Kiloan 3 Jam Selesai &amp; Antar-Jemput</span>
+                                <span class="pill-tag">Fast Delivery</span>
+                            </a>
+                            <a href="04-laundry-purelinen/template-2.html" class="pill-link">
+                                <span>2. Premium Dry Cleaning Jas, Gaun &amp; Sepatu</span>
+                                <span class="pill-tag">Luxury Fabric</span>
+                            </a>
+                            <a href="04-laundry-purelinen/template-3.html" class="pill-link">
+                                <span>3. Laundromat Koin Modern &amp; Self-Service 24 Jam</span>
+                                <span class="pill-tag">Coin Wash</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="04-laundry-purelinen/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="04-laundry-purelinen/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 5. PERCETAKAN -->
+            <div class="sector-card" data-category="industri">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 05 — PERCETAKAN &amp; FOTOCOPY</span>
+                        <div class="sector-icon"><i class="fa-solid fa-print"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevprint</h2>
+                    <p class="sector-tagline">Solusi cetak digital printing kilat, fotocopy jilid skripsi, cetak offset kemasan UMKM, banner spanduk outdoor, dan merchandise promosi.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="05-percetakan-printop/template-1.html" class="pill-link">
+                                <span>1. Digital Printing Kilat &amp; Fotocopy Dokumen</span>
+                                <span class="pill-tag">Print Hub</span>
+                            </a>
+                            <a href="05-percetakan-printop/template-2.html" class="pill-link">
+                                <span>2. Percetakan Offset, Packaging &amp; Merchandise</span>
+                                <span class="pill-tag">B2B Kemasan</span>
+                            </a>
+                            <a href="05-percetakan-printop/template-3.html" class="pill-link">
+                                <span>3. Cetak Spanduk, Banner Outdoor &amp; Reklame</span>
+                                <span class="pill-tag">Large Format</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="05-percetakan-printop/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="05-percetakan-printop/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 6. SEMBAKO -->
+            <div class="sector-card" data-category="sembako">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 06 — TOKO SEMBAKO</span>
+                        <div class="sector-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevsembako</h2>
+                    <p class="sector-tagline">Grosir &amp; eceran kebutuhan pokok dapur (beras, minyak goreng, gula, telur, gas LPG, galon) dengan layanan pesan antar langsung ke rumah.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="06-sembako-hatbazar/template-1.html" class="pill-link">
+                                <span>1. Grosir &amp; Eceran Sembako Harga Pasar Terjangkau</span>
+                                <span class="pill-tag">Warung Grosir</span>
+                            </a>
+                            <a href="06-sembako-hatbazar/template-2.html" class="pill-link">
+                                <span>2. Minimarket Modern &amp; Toko Kelontong Digital</span>
+                                <span class="pill-tag">Modern Mart</span>
+                            </a>
+                            <a href="06-sembako-hatbazar/template-3.html" class="pill-link">
+                                <span>3. Pesan Antar Sembako &amp; Kebutuhan Dapur Rumah Tangga</span>
+                                <span class="pill-tag">Delivery Order</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="06-sembako-hatbazar/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="06-sembako-hatbazar/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 7. FROZEN FOOD -->
+            <div class="sector-card" data-category="sembako">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 07 — FROZEN FOOD</span>
+                        <div class="sector-icon"><i class="fa-solid fa-snowflake"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevfrozen</h2>
+                    <p class="sector-tagline">Distributor makanan beku higienis bersertifikat halal BPOM (nugget, sosis, dimsum, kentang beku, daging sapi slice, ayam marinasi).</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="07-frozen-boskery/template-1.html" class="pill-link">
+                                <span>1. Grosir Makanan Beku Halal &amp; Siap Masak</span>
+                                <span class="pill-tag">Halal Certified</span>
+                            </a>
+                            <a href="07-frozen-boskery/template-2.html" class="pill-link">
+                                <span>2. Daging Segar, Seafood Beku &amp; Daging Slice BBQ</span>
+                                <span class="pill-tag">Fresh Meat</span>
+                            </a>
+                            <a href="07-frozen-boskery/template-3.html" class="pill-link">
+                                <span>3. Paket Kemitraan Reseller &amp; Toko Frozen Food</span>
+                                <span class="pill-tag">Paket Usaha</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="07-frozen-boskery/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="07-frozen-boskery/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 8. PENJAHIT -->
+            <div class="sector-card" data-category="lifestyle">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 08 — PENJAHIT &amp; KONVEKSI</span>
+                        <div class="sector-icon"><i class="fa-solid fa-vest-patches"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevtayler</h2>
+                    <p class="sector-tagline">Penjahit jas pria formal bespoke, kebaya pesta, konveksi seragam kantor &amp; pabrik skala besar, serta permak jeans kilat rapi.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="08-penjahit-tayler/template-1.html" class="pill-link">
+                                <span>1. Penjahit Jas Formal Pria &amp; Busana Elegan</span>
+                                <span class="pill-tag">Bespoke Tailor</span>
+                            </a>
+                            <a href="08-penjahit-tayler/template-2.html" class="pill-link">
+                                <span>2. Konveksi Seragam Pabrik, Kantor &amp; Kaos Komunitas</span>
+                                <span class="pill-tag">B2B Garment</span>
+                            </a>
+                            <a href="08-penjahit-tayler/template-3.html" class="pill-link">
+                                <span>3. Permak Kilat Pakaian, Potong Celana &amp; Modiste</span>
+                                <span class="pill-tag">Alteration Hub</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="08-penjahit-tayler/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="08-penjahit-tayler/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 9. DEPOT AIR -->
+            <div class="sector-card" data-category="sembako">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 09 — DEPOT AIR MINUM</span>
+                        <div class="sector-icon"><i class="fa-solid fa-bottle-water"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevdepot</h2>
+                    <p class="sector-tagline">Depot air minum isi ulang teknologi filtrasi multi-tahap, Reverse Osmosis (RO), sterilisasi Ozon &amp; UV dengan sertifikasi uji lab Dinkes.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="09-depot-acuasafe/template-1.html" class="pill-link">
+                                <span>1. Air Mineral RO &amp; Bio Energi Filtrasi 8 Tahap</span>
+                                <span class="pill-tag">Pure RO</span>
+                            </a>
+                            <a href="09-depot-acuasafe/template-2.html" class="pill-link">
+                                <span>2. Layanan Antar Galon Kantor, Proyek &amp; Ruko</span>
+                                <span class="pill-tag">Office Supply</span>
+                            </a>
+                            <a href="09-depot-acuasafe/template-3.html" class="pill-link">
+                                <span>3. Paket Langganan Galon Rumah Tangga Hemat</span>
+                                <span class="pill-tag">Family Plan</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="09-depot-acuasafe/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="09-depot-acuasafe/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+            <!-- 10. SERVIS ELEKTRONIK -->
+            <div class="sector-card" data-category="industri">
+                <div>
+                    <div class="card-top">
+                        <span class="sector-badge">SEKTOR 10 — SERVIS ELEKTRONIK &amp; HP</span>
+                        <div class="sector-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                    </div>
+                    <h2 class="sector-title">evevelektronik</h2>
+                    <p class="sector-tagline">Service center perbaikan smartphone iPhone &amp; Android ganti LCD 30 menit, servis laptop mati total, serta teknisi panggilan AC &amp; kulkas.</p>
+
+                    <div class="template-pills-box">
+                        <span class="template-pills-label">PILIH DARI 3 VARIASI TEMPLATE:</span>
+                        <div class="pills-list">
+                            <a href="10-servis-repairpro/template-1.html" class="pill-link">
+                                <span>1. Servis HP &amp; Ganti LCD Kilat 30 Menit Ditunggu</span>
+                                <span class="pill-tag">Smartphone Fix</span>
+                            </a>
+                            <a href="10-servis-repairpro/template-2.html" class="pill-link">
+                                <span>2. Servis Laptop, Komputer PC &amp; Recovery Data</span>
+                                <span class="pill-tag">Laptop Center</span>
+                            </a>
+                            <a href="10-servis-repairpro/template-3.html" class="pill-link">
+                                <span>3. Servis Elektronik Rumah Tangga &amp; Teknisi AC</span>
+                                <span class="pill-tag">Home Appliance</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-actions">
+                    <a href="10-servis-repairpro/index.html" class="btn-launch"><i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Template Utama</a>
+                    <a href="10-servis-repairpro/" class="btn-folder"><i class="fa-solid fa-folder"></i> Folder</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>evev<span>digital</span></h4>
+                    <p>Penyedia solusi digital, arsitektur website, dan portal template terpadu untuk percepatan digitalisasi Usaha Mikro, Kecil, dan Menengah (UMKM) Indonesia.</p>
+                </div>
+                <div>
+                    <h5 style="color: #fff; margin-bottom: 12px;">Kontak &amp; Dukungan</h5>
+                    <p><i class="fa-brands fa-whatsapp" style="color: #25D366; margin-right: 8px;"></i> 0895-3234-18658</p>
+                    <p><i class="fa-solid fa-envelope" style="color: var(--accent-cyan); margin-right: 8px;"></i> evevdigital@gmail.com</p>
+                </div>
+                <div>
+                    <h5 style="color: #fff; margin-bottom: 12px;">Lokasi Markas</h5>
+                    <p><i class="fa-solid fa-location-dot" style="color: #EF4444; margin-right: 8px;"></i> Jl. Otista Raya No. 88, Jatinegara, Jakarta Timur</p>
+                    <p><i class="fa-solid fa-clock" style="color: var(--accent-gold); margin-right: 8px;"></i> Setiap Hari: 08:00 - 21:00 WIB</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 <strong>EvEvDigital</strong>. Seluruh Hak Cipta Dilindungi.</p>
+                <p style="font-size: 13px; color: #64748B;">Dideploy dengan aman via GitHub &amp; Vercel</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function filterSectors(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.sector-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+/* ==========================================================================
+   🌓 EvEvDigital Dual Theme Engine (Dark & Light Mode for Percetakan & Fotocopy)
+   ========================================================================== */
+
+/* Smooth Transition across the page */
+body, 
+header, 
+.header,
+.top-header,
+.middle-header,
+.nav-menu a, 
+section, 
+.pricing-plan-item, 
+.card-animation,
+.choose-us-item,
+.service-item,
+.product-item,
+.footer,
+p, h1, h2, h3, h4, h5, h6 {
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease !important;
+}
+
+/* ==========================================================================
+   🌙 DARK THEME ([data-theme="dark"])
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --white: 0 0% 11%;
+  --black: 0 0% 95%;
+  --body: 0 0% 75%;
+  --neutral-50: #0a0d12;
+  --neutral-100: rgba(255, 255, 255, 0.08);
+  --neutral-200: rgba(255, 255, 255, 0.12);
+  --neutral-300: rgba(255, 255, 255, 0.16);
+  --neutral-600: rgba(255, 255, 255, 0.1);
+  --heading-color: #f8fafc;
+  --body-color: #94a3b8;
+}
+
+[data-theme="dark"] body {
+  background-color: #0b0e14 !important;
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .bg-white,
+[data-theme="dark"] .bg-neutral-50,
+[data-theme="dark"] .section-bg {
+  background-color: #0b0e14 !important;
+}
+
+[data-theme="dark"] header,
+[data-theme="dark"] .header,
+[data-theme="dark"] .middle-header,
+[data-theme="dark"] .top-header {
+  background-color: #0e1219 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .nav-menu__link,
+[data-theme="dark"] .text-heading,
+[data-theme="dark"] h1, 
+[data-theme="dark"] h2, 
+[data-theme="dark"] h3, 
+[data-theme="dark"] h4, 
+[data-theme="dark"] h5, 
+[data-theme="dark"] h6 {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .text-body {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .nav-submenu,
+[data-theme="dark"] .mega-menu {
+  background-color: #121720 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .pricing-plan-item,
+[data-theme="dark"] .choose-us-item,
+[data-theme="dark"] .service-item,
+[data-theme="dark"] .product-item,
+[data-theme="dark"] .working-process-item {
+  background-color: #121720 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .pricing-plan-item ul li {
+  color: #cbd5e1 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #0e1219 !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] ::placeholder {
+  color: #64748b !important;
+}
+
+[data-theme="dark"] footer,
+[data-theme="dark"] .footer {
+  background-color: #07090e !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .bottom-footer {
+  background-color: #040609 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ==========================================================================
+   ☀️ LIGHT THEME ([data-theme="light"])
+   ========================================================================= */
+[data-theme="light"] {
+  color-scheme: light;
+  --white: 0 0% 100%;
+  --black: 0 0% 13%;
+  --body: 0 0% 48%;
+  --heading-color: var(--black);
+  --body-color: var(--body);
+}
+
+[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #4b5563 !important;
+}
+
+[data-theme="light"] .pricing-plan-item,
+[data-theme="light"] .choose-us-item,
+[data-theme="light"] .service-item {
+  background-color: #ffffff !important;
+  border: 1px solid #eef2f6 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06) !important;
+}
+
+/* ==========================================================================
+   🔘 THEME TOGGLE BUTTON & FLOATING ACTIONS
+   ========================================================================== */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(40, 167, 69, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: #171717;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  color: #ffffff;
+  border-color: rgba(40, 167, 69, 0.5);
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  border-color: #28a745;
+  background: #28a745;
+  color: #ffffff !important;
+  box-shadow: 0 6px 18px rgba(40, 167, 69, 0.4);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #f1f4f8;
+  color: #071c1f;
+  border-color: #d1d9e2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.theme-toggle-btn svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:active svg {
+  transform: rotate(45deg);
+}
+
+/* Floating WhatsApp Quick Pill */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+  animation: waPulse 2.8s infinite;
+}
+
+.floating-wa-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #ffffff !important;
+}
+
+.floating-wa-btn i, 
+.floating-wa-btn svg {
+  font-size: 20px;
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-wa-btn span {
+    display: none;
+  }
+  .floating-wa-btn {
+    padding: 14px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+  }
+}
+
+/* EvEvDigital Official Footer Branding */
+.footer-maker {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+.footer-maker b {
+  font-weight: 800;
+}
+
+
+/* ==========================================================================
+   🖼️ EVEVPRINT VISUAL HELPERS & HIGH-CONTRAST FOOTER
+   ========================================================================== */
+.service-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 18px;
+}
+.service-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-photo,
+.service-item:hover .service-photo {
+  transform: scale(1.05);
+}
+.icon-3d {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.25));
+  margin-bottom: 12px;
+}
+.service-price-tag {
+  display: inline-block;
+  background: rgba(2, 132, 199, 0.12);
+  color: #0284C7;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+[data-theme="dark"] .service-price-tag {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+.badge-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(135deg, #0284C7, #0EA5E9);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* SOLID HIGH-CONTRAST DARK FOOTER */
+.footer, footer, .footer-section, .footer-two, .footer-area {
+  background-color: #070A0E !important;
+  color: #F1F5F9 !important;
+}
+.footer p, footer p, .footer-section p, .footer-two p, .footer-area p {
+  color: #E2E8F0 !important;
+  opacity: 1 !important;
+}
+.footer a, footer a, .footer-section a, .footer-two a, .footer-area a {
+  color: #CBD5E1 !important;
+}
+.footer a:hover, footer a:hover, .footer-section a:hover, .footer-two a:hover, .footer-area a:hover {
+  color: #38BDF8 !important;
+}
+.footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6,
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6,
+.footer-area h1, .footer-area h2, .footer-area h3, .footer-area h4, .footer-area h5, .footer-area h6 {
+  color: #FFFFFF !important;
+}
+.footer-maker a {
+  color: #0284C7 !important;
+  font-weight: 700 !important;
+}
+
+/* Suppress Duplicate Floating WA */
+.wa-floating, .wa-float-pill, .whatsapp-float:not(.floating-wa-btn) {
+  display: none !important;
+}

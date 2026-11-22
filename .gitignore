@@ -1,0 +1,8 @@
+# Dependencies & build
+node_modules/
+.vercel
+_archive_drafts/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

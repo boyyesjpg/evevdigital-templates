@@ -1,0 +1,281 @@
+/* =====================================================================
+   EvEvDigital Dual Theme Engine (Dark & Light Mode) - Sektor 06 Sembako
+   ===================================================================== */
+
+:root {
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light Mode (Default) */
+[data-theme="light"], body:not([data-theme="dark"]) {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+}
+
+[data-theme="dark"] body {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .page-wrapper,
+[data-theme="dark"] .boxed_wrapper,
+[data-theme="dark"] .main-header,
+[data-theme="dark"] .header-upper,
+[data-theme="dark"] .header-lower,
+[data-theme="dark"] .sticky-header,
+[data-theme="dark"] .banner-section,
+[data-theme="dark"] .banner-style-two,
+[data-theme="dark"] .banner-style-three,
+[data-theme="dark"] .shop-section,
+[data-theme="dark"] .shop-style-two,
+[data-theme="dark"] .shop-style-three,
+[data-theme="dark"] .shop-style-four,
+[data-theme="dark"] .shop-style-five,
+[data-theme="dark"] .shop-style-six,
+[data-theme="dark"] .shop-style-seven,
+[data-theme="dark"] .shop-style-eight,
+[data-theme="dark"] .deals-section,
+[data-theme="dark"] .cta-section,
+[data-theme="dark"] .cta-style-two,
+[data-theme="dark"] .category-section,
+[data-theme="dark"] .featured-section,
+[data-theme="dark"] .featured-style-two,
+[data-theme="dark"] .ads-section,
+[data-theme="dark"] .news-section,
+[data-theme="dark"] .highlights-section,
+[data-theme="dark"] .footer-top,
+[data-theme="dark"] .footer-bottom,
+[data-theme="dark"] .main-footer {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] .shop-block-one .inner-box,
+[data-theme="dark"] .shop-block-two .inner-box,
+[data-theme="dark"] .shop-block-three .inner-box,
+[data-theme="dark"] .category-block-one .inner-box,
+[data-theme="dark"] .feature-block-one .inner-box,
+[data-theme="dark"] .news-block-one .inner-box,
+[data-theme="dark"] .cart-menu,
+[data-theme="dark"] .cart-menu .cart-products,
+[data-theme="dark"] .cart-box,
+[data-theme="dark"] .search-area,
+[data-theme="dark"] .search-box input,
+[data-theme="dark"] .select-box .nice-select,
+[data-theme="dark"] .select-box .nice-select .list,
+[data-theme="dark"] .support-box,
+[data-theme="dark"] .card,
+[data-theme="dark"] .inner-box {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+[data-theme="dark"] .sec-title h2,
+[data-theme="dark"] .shop-block-one .inner-box h4 a,
+[data-theme="dark"] .shop-block-two .inner-box h5 a,
+[data-theme="dark"] .navigation > li > a {
+  color: #f8fafc !important;
+}
+
+[data-theme="dark"] p,
+[data-theme="dark"] .text,
+[data-theme="dark"] span:not(.theme-toggle-btn):not(.btn):not(.price):not(.current):not(.badge):not(.footer-maker):not(.footer-maker *) {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .price,
+[data-theme="dark"] .item-price,
+[data-theme="dark"] .current-price {
+  color: #4ade80 !important;
+}
+
+[data-theme="dark"] .border-top,
+[data-theme="dark"] .border-bottom,
+[data-theme="dark"] .border-start,
+[data-theme="dark"] .border-end {
+  border-color: #334155 !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: #ffffff;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-size: 18px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="dark"] .theme-toggle-btn {
+  background-color: #1e293b;
+  border-color: #334155;
+  color: #fbbf24;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.theme-toggle-btn:hover {
+  transform: scale(1.08);
+}
+
+/* Floating WhatsApp Button */
+.wa-floating, .wa-float-pill, .wa-floating-pill {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 99999;
+  background-color: #25d366;
+  color: #ffffff !important;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wa-floating:hover, .wa-float-pill:hover, .wa-floating-pill:hover {
+  background-color: #1eb857;
+  color: #ffffff !important;
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 28px rgba(37, 211, 102, 0.6);
+}
+
+.wa-floating i, .wa-float-pill i, .wa-floating-pill i {
+  font-size: 20px;
+}
+
+/* Footer maker */
+.footer-maker {
+  font-size: 14px;
+  color: #64748b;
+}
+
+[data-theme="dark"] .footer-maker {
+  color: #94a3b8;
+}
+
+.footer-maker a {
+  color: #22c55e !important;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-maker a:hover {
+  text-decoration: underline;
+}
+
+
+/* =====================================================================
+   🖼️ EVEVSEMBAKO VISUAL HELPERS & HIGH-CONTRAST SOLID FOOTER
+   ===================================================================== */
+.service-photo-wrap, .product-photo-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+.service-photo, .product-photo {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.service-card:hover .service-photo,
+.product-card:hover .product-photo,
+.feature-block:hover .service-photo {
+  transform: scale(1.05);
+}
+.icon-3d {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.22));
+  margin-bottom: 12px;
+}
+.service-price-tag {
+  display: inline-block;
+  background: rgba(16, 185, 129, 0.12);
+  color: #10B981;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+[data-theme="dark"] .service-price-tag {
+  background: rgba(52, 211, 153, 0.2);
+  color: #34d399;
+}
+.badge-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: linear-gradient(135deg, #10B981, #059669);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 2;
+}
+
+/* SOLID HIGH-CONTRAST DARK FOOTER */
+.main-footer, footer, .footer, .footer-top, .footer-bottom {
+  background-color: #070A0E !important;
+  color: #F1F5F9 !important;
+}
+.main-footer p, footer p, .footer p, .footer-top p, .footer-bottom p {
+  color: #E2E8F0 !important;
+  opacity: 1 !important;
+}
+.main-footer a, footer a, .footer a, .footer-top a, .footer-bottom a {
+  color: #CBD5E1 !important;
+}
+.main-footer a:hover, footer a:hover, .footer a:hover, .footer-top a:hover, .footer-bottom a:hover {
+  color: #38BDF8 !important;
+}
+.main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6,
+footer h1, footer h2, footer h3, footer h4, footer h5, footer h6 {
+  color: #FFFFFF !important;
+}
+.footer-maker a {
+  color: #10B981 !important;
+  font-weight: 700 !important;
+}
+
+/* Suppress Duplicate Floating WA */
+.wa-floating, .wa-float-pill, .whatsapp-float:not(.floating-wa-btn) {
+  display: none !important;
+}

@@ -1,0 +1,477 @@
+/* ==========================================================================
+   🌓 EvEvDigital Dual Theme Engine (Dark & Light Mode for Bengkel & Otomotif)
+   ========================================================================== */
+
+/* Smooth Transition across the page */
+body, 
+.nav-header, 
+.sticky-wrapper, 
+.menu-area,
+.service-card, 
+.pricing-card, 
+.process-card, 
+.process-card2,
+.feature-card,
+.wcu-card,
+.team-card,
+.faq-card,
+.accordion-item,
+.appointment-form-wrap,
+.testimonial-card,
+.counter-card,
+.blog-card,
+footer,
+p, h1, h2, h3, h4, h5, h6 {
+  transition: background-color 0.28s ease, color 0.28s ease, border-color 0.28s ease, box-shadow 0.28s ease !important;
+}
+
+/* ==========================================================================
+   🌙 DARK THEME ([data-theme="dark"])
+   ========================================================================== */
+[data-theme="dark"] {
+  color-scheme: dark;
+  --white-color: #161822;
+  --smoke-color: #0d0f15;
+  --smoke-color2: #141722;
+  --smoke-color3: #1c202e;
+  --smoke-color4: #12141d;
+  --smoke-color5: #181c28;
+  --title-color: #f3f5f9;
+  --body-color: #b0b6c6;
+  --border-color: rgba(255, 255, 255, 0.12);
+  --gray-color: #e0e3ed;
+  --black-color: #08090d;
+}
+
+[data-theme="dark"] body {
+  background-color: #0d0f15 !important;
+  color: #b0b6c6 !important;
+}
+
+[data-theme="dark"] .bg-smoke,
+[data-theme="dark"] .bg-smoke2,
+[data-theme="dark"] .bg-smoke3,
+[data-theme="dark"] .bg-white {
+  background-color: #0d0f15 !important;
+}
+
+[data-theme="dark"] .nav-header {
+  background-color: #12141c !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .header-top {
+  background-color: #0a0b10 !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+[data-theme="dark"] .menu-area {
+  background-color: #12141c !important;
+}
+
+[data-theme="dark"] .main-menu > ul > li > a {
+  color: #f3f5f9 !important;
+}
+
+[data-theme="dark"] .main-menu ul.sub-menu {
+  background-color: #161822 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+[data-theme="dark"] .main-menu ul.sub-menu li a {
+  color: #c5cad6 !important;
+}
+
+[data-theme="dark"] .main-menu ul.sub-menu li a:hover {
+  color: var(--theme-color) !important;
+}
+
+[data-theme="dark"] .service-card,
+[data-theme="dark"] .pricing-card,
+[data-theme="dark"] .process-card,
+[data-theme="dark"] .process-card2,
+[data-theme="dark"] .feature-card,
+[data-theme="dark"] .wcu-card,
+[data-theme="dark"] .team-card,
+[data-theme="dark"] .accordion-item,
+[data-theme="dark"] .testimonial-card,
+[data-theme="dark"] .counter-card,
+[data-theme="dark"] .blog-card {
+  background-color: #161822 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+}
+
+[data-theme="dark"] .service-card .service-title a,
+[data-theme="dark"] .pricing-card .pricing-card-title,
+[data-theme="dark"] .wcu-card .title,
+[data-theme="dark"] .team-card .team-title a,
+[data-theme="dark"] .accordion-button {
+  color: #f3f5f9 !important;
+}
+
+[data-theme="dark"] .accordion-button:not(.collapsed) {
+  background-color: #1c202e !important;
+  color: var(--theme-color) !important;
+}
+
+[data-theme="dark"] .accordion-body {
+  background-color: #161822 !important;
+  color: #b0b6c6 !important;
+}
+
+[data-theme="dark"] .appointment-form-wrap {
+  background-color: #161822 !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select,
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] input[type="date"],
+[data-theme="dark"] input[type="time"],
+[data-theme="dark"] select,
+[data-theme="dark"] textarea {
+  background-color: #10121a !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] textarea:focus {
+  border-color: var(--theme-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(232, 9, 46, 0.25) !important;
+}
+
+[data-theme="dark"] ::placeholder {
+  color: #7b8296 !important;
+}
+
+[data-theme="dark"] .checklist li {
+  color: #c5cad6 !important;
+}
+
+[data-theme="dark"] .text-smoke {
+  color: #9ea5b8 !important;
+}
+
+[data-theme="dark"] .footer-layout1,
+[data-theme="dark"] .footer-layout2 {
+  background-color: #090a0f !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+[data-theme="dark"] .copyright-wrap {
+  background-color: #06070a !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+/* ==========================================================================
+   ☀️ LIGHT THEME ([data-theme="light"])
+   ========================================================================== */
+[data-theme="light"] {
+  color-scheme: light;
+  --white-color: #ffffff;
+  --smoke-color: #F4F4F4;
+  --smoke-color2: #F6F6F7;
+  --smoke-color3: #F5F5F6;
+  --smoke-color4: #F4F4F4;
+  --smoke-color5: #F0F2F4;
+  --title-color: #171717;
+  --body-color: #525763;
+  --border-color: #E1E1E1;
+  --gray-color: #232323;
+  --black-color: #202020;
+}
+
+[data-theme="light"] body {
+  background-color: #ffffff !important;
+  color: #525763 !important;
+}
+
+[data-theme="light"] .service-card,
+[data-theme="light"] .pricing-card,
+[data-theme="light"] .wcu-card,
+[data-theme="light"] .team-card {
+  background-color: #ffffff !important;
+  border: 1px solid #eef0f3 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* ==========================================================================
+   🔘 THEME TOGGLE BUTTON & FLOATING ACTIONS
+   ========================================================================== */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(232, 9, 46, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  color: #ffffff;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  padding: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-toggle-btn:hover {
+  transform: translateY(-2px) scale(1.06);
+  border-color: var(--theme-color, #E8092E);
+  background: var(--theme-color, #E8092E);
+  color: #ffffff;
+  box-shadow: 0 6px 18px rgba(232, 9, 46, 0.4);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #f4f5f8;
+  color: #171717;
+  border-color: #e2e5eb;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: var(--theme-color, #E8092E);
+  color: #ffffff;
+  border-color: var(--theme-color, #E8092E);
+}
+
+.theme-toggle-btn svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  pointer-events: none;
+  transition: transform 0.3s ease;
+}
+
+.theme-toggle-btn:active svg {
+  transform: rotate(45deg);
+}
+
+/* Floating WhatsApp Quick Pill */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #ffffff !important;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 14px;
+  text-decoration: none !important;
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+  transition: all 0.3s ease;
+  animation: waPulse 2.8s infinite;
+}
+
+.floating-wa-btn:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+  color: #ffffff !important;
+}
+
+.floating-wa-btn i, 
+.floating-wa-btn svg {
+  font-size: 20px;
+}
+
+@keyframes waPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .floating-wa-btn span {
+    display: none;
+  }
+  .floating-wa-btn {
+    padding: 14px;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+  }
+}
+
+/* EvEvDigital Official Footer Branding */
+.footer-maker {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 14px;
+}
+.footer-maker b {
+  font-weight: 800;
+}
+
+/* Guard against duplicate floating pills */
+.wa-floating, .wa-float-pill {
+  display: none !important;
+}
+
+/* ==========================================================================
+   High-Contrast Footer Guarantee (Dark & Light Mode Crispness)
+   ========================================================================== */
+footer.footer-wrapper,
+.footer-wrapper,
+.footer-layout1,
+.footer-layout2,
+.footer-layout3 {
+  background-color: #0c0e14 !important;
+  color: #f1f5f9 !important;
+  position: relative;
+}
+
+footer.footer-wrapper::before,
+.footer-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(12, 14, 20, 0.88);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-wrapper .container {
+  position: relative;
+  z-index: 2;
+}
+
+.footer-wrapper p,
+.footer-wrapper .footer-text,
+.footer-wrapper .text-white-50,
+.footer-wrapper .widget-contact p,
+.copyright-wrap p,
+.copyright-wrap span {
+  color: #f1f5f9 !important;
+  opacity: 1 !important;
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+
+.footer-wrapper .widget-contact p strong,
+.footer-wrapper .widget-contact p a {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+}
+
+.footer-wrapper .widget-contact p a:hover {
+  color: #E8092E !important;
+}
+
+.footer-wrapper h3.widget_title {
+  color: #ffffff !important;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.footer-wrapper .widget_nav_menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-wrapper .widget_nav_menu ul li {
+  margin-bottom: 10px;
+}
+
+.footer-wrapper .widget_nav_menu ul li a {
+  color: #cbd5e1 !important;
+  font-weight: 400;
+  font-size: 14px;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  display: inline-block;
+}
+
+.footer-wrapper .widget_nav_menu ul li a:hover {
+  color: #E8092E !important;
+  transform: translateX(4px);
+}
+
+.footer-wrapper .th-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12) !important;
+  color: #ffffff !important;
+  margin-right: 8px;
+  transition: all 0.25s ease;
+  text-decoration: none !important;
+}
+
+.footer-wrapper .th-social a:hover {
+  background: #E8092E !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+.copyright-wrap {
+  background-color: #06070a !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 18px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Service Card High-Quality Visual Enhancements */
+.service-card {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.15) !important;
+}
+
+.service-card .service-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-photo {
+  transform: scale(1.02);
+}
+
+.service-card .icon-3d {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}

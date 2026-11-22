@@ -1,0 +1,179 @@
+/* =====================================================================
+   EvEvDigital Dual Theme Engine (Dark & Light Mode) - Sektor 10 Servis HP
+   ===================================================================== */
+
+:root {
+  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Light Mode (Default) */
+[data-theme="light"], body:not([data-theme="dark"]) {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --header-bg: #ffffff;
+}
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --bg-card: #161e2e;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: #273549;
+  --header-bg: #0f172a;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .main-header,
+[data-theme="dark"] .header-upper,
+[data-theme="dark"] .header-lower,
+[data-theme="dark"] .outer-area {
+  background-color: var(--header-bg) !important;
+  border-color: var(--border-color) !important;
+}
+
+[data-theme="dark"] .about-section,
+[data-theme="dark"] .service-section,
+[data-theme="dark"] .catagory-section,
+[data-theme="dark"] .choose-section,
+[data-theme="dark"] .appointment-section,
+[data-theme="dark"] .team-section,
+[data-theme="dark"] .working-section,
+[data-theme="dark"] .testimonial-faq-section,
+[data-theme="dark"] .cta-section,
+[data-theme="dark"] .news-section {
+  background-color: var(--bg-primary) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] .single-service-box,
+[data-theme="dark"] .catagory-content,
+[data-theme="dark"] .choose-left,
+[data-theme="dark"] .choose-right,
+[data-theme="dark"] .single-item,
+[data-theme="dark"] .single-testimonial,
+[data-theme="dark"] .panel-default {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-main) !important;
+}
+
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6,
+[data-theme="dark"] .title, [data-theme="dark"] .sec-title h2 {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] p, [data-theme="dark"] .text {
+  color: var(--text-muted) !important;
+}
+
+/* =====================================================================
+   EvEvDigital Standard Solid Footer (#070A0E)
+   ===================================================================== */
+.footer-section {
+  background-color: #070A0E !important;
+  color: #cbd5e1 !important;
+  padding: 60px 0 20px 0 !important;
+  border-top: 1px solid #1e293b !important;
+}
+
+.footer-section h1, .footer-section h2, .footer-section h3, 
+.footer-section h4, .footer-section h5, .footer-section h6,
+.footer-section .footer-title, .footer-section .widget-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+.footer-section p, .footer-section .text, .footer-section span,
+.footer-section li, .footer-section a {
+  color: #cbd5e1 !important;
+}
+
+.footer-section a:hover {
+  color: #60c5e4 !important;
+}
+
+.footer-section .footer-bottom {
+  background-color: #040608 !important;
+  border-top: 1px solid #141b26 !important;
+  padding: 20px 0 !important;
+  margin-top: 40px !important;
+}
+
+.footer-section .footer-bottom .text {
+  color: #94a3b8 !important;
+}
+
+.footer-section .footer-bottom span {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+/* =====================================================================
+   Floating WhatsApp Button
+   ===================================================================== */
+.floating-wa-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  color: #ffffff !important;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  z-index: 99999;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.floating-wa-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+  color: #ffffff !important;
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  background: #1e293b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: #334155;
+  color: #60c5e4;
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  color: #1e293b;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: #e2e8f0;
+}
