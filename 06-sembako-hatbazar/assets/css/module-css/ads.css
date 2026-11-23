@@ -61,8 +61,15 @@
   background-repeat: no-repeat;
 }
 
-.ads-block-one .inner-box .image img{
+.ads-block-one .inner-box .image img,
+.ads-block .image img,
+.ads-block-two .inner-box .image img{
   position: relative;
+  max-width: 320px;
+  max-height: 280px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
   transition: all 0.5s ease-in-out 0.3s;
 }
 

@@ -142,6 +142,14 @@
   background-repeat: no-repeat;
 }
 
+.cta-style-two .image-layer img{
+  max-width: 320px;
+  max-height: 220px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .cta-style-two .inner-container.pink-bg{
   background: #FF6485;
 }

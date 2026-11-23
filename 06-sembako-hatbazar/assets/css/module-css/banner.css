@@ -240,6 +240,23 @@
   transition: all 0.5s ease-in-out 0.0s;
 }
 
+.banner-content-three .inner-box .image-box img{
+  max-width: 460px;
+  max-height: 380px;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.banner-content-four .inner-box .image img{
+  max-width: 220px;
+  max-height: 190px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
 .banner-content-four .inner-box:hover .image,
 .banner-content-three .inner-box:hover .image-box{
   transform: scale(1.05);
