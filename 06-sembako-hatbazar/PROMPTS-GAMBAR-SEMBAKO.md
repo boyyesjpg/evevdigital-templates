@@ -1,140 +1,154 @@
-# PANDUAN PROMPT BATCH CHATGPT / DALL-E 3: ASET GAMBAR SEMBAKO INDONESIA
-**Proyek:** Template Website UMKM `evevsembako` (`06-sembako-hatbazar`)  
-**Metode:** **Sistem Batch Grid Sheet (1 Prompt = 4 s/d 9 Gambar Sekaligus)**  
-**Tool Pemotong Otomatis:** `python crop_batch.py` (sudah tersedia di folder ini)
+# PROMPT BATCH CHATGPT / DALL-E: ASET GAMBAR SEMBAKO INDONESIA
+*(Langsung salin dan tempel ke chat ChatGPT Plus / GPT-4o tanpa perlu install alat apa pun)*
 
 ---
 
-## ALUR KERJA CEPAT 3 LANGKAH (HEMAT WAKTU & TOKEN)
-
-```text
-[1. Copy Prompt Batch] ──> [2. Generate di ChatGPT/DALL-E] ──> [3. Simpan & Jalankan crop_batch.py]
-   (Pilih Batch 1 - 4)        (Hasil 1 lembar grid produk)         (Otomatis terpotong & masuk web)
-```
-
-1. **Salin salah satu Prompt Batch** di bawah ke ChatGPT (model GPT-4o / DALL-E 3) atau Midjourney.
-2. ChatGPT akan menghasilkan **1 gambar lembar grid yang berisi 4 sampai 9 produk sekaligus** dengan background putih bersih dan pencahayaan studio yang konsisten.
-3. Simpan gambar dari ChatGPT tersebut ke folder `06-sembako-hatbazar/` dengan nama:
-   - **`batch-1.png`** (untuk Batch 1)
-   - **`batch-2.png`** (untuk Batch 2)
-   - **`batch-3.png`** (untuk Batch 3)
-   - **`batch-4.png`** (untuk Batch 4)
-4. Jalankan perintah di terminal:
-   ```bash
-   python crop_batch.py
-   ```
-   *Skrip Python akan otomatis memotong setiap kotak produk, me-resize ke 600x600 px WebP berkualitas tinggi, dan langsung menyimpannya ke folder `assets/images/evevsembako/` sesuai nama file yang digunakan website!*
+## CARA PAKAI PALING MUDAH DI CHATGPT
+1. Buka ChatGPT (pastikan menggunakan model **GPT-4o** atau model yang mengaktifkan **DALL-E 3**).
+2. Salin **Prompt Master** atau salah satu **Prompt Batch** di bawah ini ke kolom chat ChatGPT.
+3. ChatGPT akan langsung men-generate gambar produk sembako berkualitas studio komersial tanpa terblokir filter copyright/merek dagang.
 
 ---
 
-## 1. DAFTAR PROMPT BATCH SIAP SALIN (BATCH 1 - BATCH 5)
+## 🌟 PROMPT MASTER OTOMATIS (SALIN INI KE CHATGPT)
 
-### BATCH 1: 9 Produk Sembako Pokok & Dapur Utama (Grid 3x3)
-*Menghasilkan 9 produk pokok dalam 1 gambar lembar (3 baris x 3 kolom). Cukup 1 kali kirim prompt ke ChatGPT.*
+> *Salin teks di dalam kotak ini, paste ke ChatGPT, dan kirimkan:*
 
 ```text
-A professional commercial product photography grid sheet, neatly arranged in a 3x3 grid (3 rows and 3 columns) on a seamless pure white studio background. Each cell displays one distinct Indonesian grocery staple, centered with balanced spacing and soft natural drop shadows:
+Halo ChatGPT, tolong bertindak sebagai fotografer studio komersial e-commerce profesional. Saya butuh gambar produk sembako Indonesia untuk katalog website.
 
-- Row 1, Col 1: A premium 5kg transparent plastic sack of long-grain white rice with green and gold Indonesian label "Beras Setra Ramos Super 5kg".
-- Row 1, Col 2: A standing 2-liter refill pouch of crystal-clear golden palm cooking oil with yellow label "Minyak Goreng Sawit 2L".
-- Row 1, Col 3: A molded pulp egg carton tray containing fresh brown farm chicken eggs (telur ayam ras segar).
-- Row 2, Col 1: A 1kg clear sealed pillow-pack bag of sparkling white refined cane sugar with green badge "Gula Pasir Kristal 1kg".
-- Row 2, Col 2: A 1kg paper sack pack of premium wheat flour with iconic blue branding "Tepung Terigu Serbaguna 1kg".
-- Row 2, Col 3: A factory-sealed brown cardboard carton box of instant noodles labeled "Indomie Goreng 40 Pcs".
-- Row 3, Col 1: A standing 550ml dark-green refill pouch of thick Indonesian sweet soy sauce with gold label "Kecap Manis Kedelai Hitam 550ml".
-- Row 3, Col 2: A bright yellow and blue 200g foil pack of multi-purpose margarine "Margarin Serbaguna 200g".
-- Row 3, Col 3: A clean 250g cyan and white sealed pouch of iodized fine kitchen salt "Garam Dapur Beryodium 250g".
+Tolong buatkan gambar dengan DALL-E 3 mengikuti standar ini:
+- Format: Foto studio produk komersial, pencahayaan softbox studio ganda, latar belakang putih bersih (pure white background / seamless studio backdrop), bayangan lembut di bawah produk, resolusi ultra-realistis 8k, rasio 1:1 (kotak/square).
+- Kemasan: Khas ritel Indonesia modern, rapi, bersih, tanpa teks aneh atau watermark.
 
-Even studio softbox illumination across all 9 items, identical camera angle, ultra-sharp 8k commercial packshot quality, knolling product layout, no overlapping items. --ar 1:1
+Kita akan buat dalam 4 BATCH. Tolong buatkan BATCH 1 terlebih dahulu:
+
+=== BATCH 1: 5 PRODUK POKOK UTAMA ===
+1. Beras Putih 5kg - Karung plastik transparan tebal berdiri tegak, terlihat butiran beras panjang putih pulen di dalamnya, pegangan plastik di atas, label hijau-emas modern "Beras Super Ramos 5kg".
+2. Minyak Goreng Pouch 2 Liter - Pouch standing refill plastik tebal isi minyak goreng kelapa sawit berwarna emas jernih berkilau, ada tutup ulir di sudut atas.
+3. Telur Ayam Ras Fresh 1kg - 16 butir telur ayam negeri berwarna cokelat bersih tanpa retak, tersusun rapi di atas tray karton cokelat (egg tray).
+4. Gula Pasir Putih 1kg - Kemasan plastik pillow pack transparan tebal berisi butiran gula kristal putih murni, ada sendok kayu kecil dengan taburan gula di sampingnya.
+5. Tepung Terigu 1kg - Kantong kertas tebal rapi warna putih dengan aksen biru bertuliskan "Tepung Terigu Serbaguna 1kg", sedikit taburan tepung halus di dasarnya.
+
+Silakan generate gambar produk nomor 1 sekarang, lalu lanjutkan otomatis ke nomor berikutnya.
 ```
 
 ---
 
-### BATCH 2: 9 Bumbu Dapur, Minuman & Kebersihan Rumah Tangga (Grid 3x3)
-*Menghasilkan 9 produk pelengkap dapur & harian dalam 1 gambar lembar (3 baris x 3 kolom).*
+## 📦 PILIHAN PROMPT PER BATCH (UNTUK COPY-PASTE CEPAT)
+
+### BATCH 1: Bahan Pokok & Sembako Dapur Utama
+*Gunakan prompt bahasa Inggris ini untuk hasil fotorealistik DALL-E 3 dengan akurasi visual tertinggi:*
 
 ```text
-A professional commercial product photography grid sheet arranged in a 3x3 grid (3 rows and 3 columns) on an immaculate pure white studio background. High-detail studio photography of Indonesian household and kitchen goods, separated with clean gutters and soft ground shadows:
+Commercial e-commerce studio product photography of Indonesian essential kitchen staples on a clean seamless pure white background, studio softbox lighting, ultra-realistic 8k, square ratio (1:1):
 
-- Row 1, Col 1: A 165g deep-red and glossy black ground coffee foil pack labeled "Kopi Bubuk Hitam Mantap 165g" with a few roasted coffee beans.
-- Row 1, Col 2: A rectangular teal-green cardboard box of Indonesian black tea bags labeled "Teh Celup Asli Isi 30 Kantong".
-- Row 1, Col 3: A classic 370g metal tin can of sweetened condensed milk with blue and white label "Susu Kental Manis 370g".
-- Row 2, Col 1: A tall 425g glossy red tin can of sardines in rich tomato sauce with pull-tab lid labeled "Sarden Ikan Saus Tomat 425g".
-- Row 2, Col 2: A 335ml clear glass bottle with bright red extra-hot chili sauce and yellow cap labeled "Saus Sambal Ekstra Pedas 335ml".
-- Row 2, Col 3: A small rustic woven bamboo basket filled with 1kg of fresh purple-red Indonesian shallots (bawang merah Brebes) and plump white garlic bulbs.
-- Row 3, Col 1: A shallow bamboo tray with 500g of fresh glossy Indonesian red curly chilies and spicy bird's eye chilies with green stems.
-- Row 3, Col 2: A 650ml vibrant lime-green stand-up refill pouch of dishwashing liquid with sliced lime graphic "Sabun Cuci Piring Jeruk Nipis 650ml".
-- Row 3, Col 3: A 770g fragrant laundry powder detergent bag with bright floral green-pink packaging "Deterjen Bubuk Anti Noda 770g".
+1. Rice Sack 5kg: A standing premium 5kg transparent thick plastic rice bag showing clean long-grain white rice grains inside, neat handle on top, modern green-gold label badge.
+2. Cooking Oil 2L: A standing 2-liter refill pouch filled with crystal-clear golden palm cooking oil, glossy reflections, yellow cap on corner.
+3. Fresh Farm Eggs 1kg: 16 clean brown Indonesian chicken eggs with speckled shells arranged neatly in a molded pulp carton egg tray.
+4. Granulated White Sugar 1kg: A clear sealed 1kg pillow-pack bag of glistening white refined cane sugar crystals with a small rustic wooden spoon beside it.
+5. All-Purpose Wheat Flour 1kg: A clean 1kg white paper flour sack with blue accents, soft white flour dust at the base.
 
-Consistent studio lighting, neutral pure white background, identical scale, ultra-photorealistic 8k commercial quality. --ar 1:1
+Photorealistic commercial advertising packshot quality, centered composition, soft natural ground shadow. --ar 1:1
 ```
 
 ---
 
-### BATCH 3: 6 Produk Grosir & Kulakan Partai Warung (Grid 3x2)
-*Menghasilkan 6 item grosir/partai besar (2 baris x 3 kolom) untuk halaman Template 2 (Grosir).*
+### BATCH 2: Bumbu Masak & Rempah Dapur
+*Bebas sensor copyright merek (menggunakan deskriptor visual akurat khas dapur Indonesia):*
 
 ```text
-A commercial wholesale warehouse product photography sheet arranged in a clean 2x3 grid (2 rows and 3 columns) on a clean industrial studio white background. Each cell shows bulk wholesale grocery stock for Indonesian warung kelontong:
+Commercial product photography of Indonesian cooking seasonings and spices on an immaculate pure white studio background, bright softbox illumination, sharp focus, square ratio (1:1):
 
-- Row 1, Col 1: A stack of three heavy 25kg woven polypropylene sacks of rice labeled "Beras Ramos Super 25 KG Grosir" with industrial stitched tops.
-- Row 1, Col 2: A sealed corrugated brown master carton of cooking oil labeled "Minyak Goreng Karton Pabrik Isi 6 Pouch x 2L" with factory tape.
-- Row 1, Col 3: A sturdy wooden crate containing 15kg of clean brown farm chicken eggs (krat telur 15kg untuk kulakan toko).
-- Row 2, Col 1: A 50kg heavy woven white sugar sack (karung zak gula pasir pabrik 50kg) standing upright with refinery print.
-- Row 2, Col 2: Two stacked cardboard delivery cartons of instant fried noodles with official shipping marks "Dus Karton 40 Bungkus Mie Goreng".
-- Row 2, Col 3: A retail hanging display strip / cardboard box containing 10 hanging strips (100 sachets) of instant coffee "Kopi Sachet Renceng 10 Renceng".
+1. Sweet Soy Sauce Pouch 550ml: A standing 550ml dark-green refill pouch filled with thick Indonesian sweet black soybean sauce, glossy dark droplet graphic on label.
+2. Extra Hot Chili Sauce 335ml: A 335ml clear glass bottle of bright red Indonesian extra-hot chili sauce with a yellow twist cap and red pepper illustration on label.
+3. Fresh Shallots & Garlic 1kg: A shallow rustic woven bamboo basket filled with 1kg of fresh purple-red Brebes shallots and plump clean white garlic bulbs.
+4. Fresh Red Curly Chilies 500g: A woven bamboo tray containing 500g of vibrant, fresh, glossy Indonesian red curly chilies and spicy bird's eye chilies with green stems intact.
+5. Iodized Table Salt 250g: A crisp sealed 250g cyan and white foil pouch of fine kitchen table salt with Indonesian quality SNI certification badge.
 
-Bright studio warehouse lighting, clean commercial presentation, crisp focus on packaging textures and labels, high resolution. --ar 3:2
+Crisp commercial food advertising style, appetizing textures, soft drop shadow, isolated on pure white. --ar 1:1
 ```
 
 ---
 
-### BATCH 4: 4 Paket Sembako & Parsel Bingkisan (Grid 2x2)
-*Menghasilkan 4 paket sembako komplit (2 baris x 2 kolom) untuk halaman Template 3 (Delivery & Paket).*
+### BATCH 3: Kopi, Teh, Susu & Mi Instan
+*Kebutuhan sarapan dan makanan cepat saji favorit keluarga Indonesia:*
 
 ```text
-A commercial product photography grid sheet arranged in a 2x2 grid (2 rows and 2 columns) on a seamless warm off-white studio background. Each cell shows an artfully bundled Indonesian essential grocery package:
+Commercial advertising studio packshots of popular Indonesian breakfast and pantry goods on a pristine pure white backdrop, professional studio lighting, 8k resolution, square (1:1):
 
-- Top-Left (Row 1, Col 1): "Paket Sembako Berkah" - A clean grocery bundle containing 1 bag of 5kg white rice, 1 pouch of 2L cooking oil, 1kg sugar, 1 box of tea, and 5 packs of instant noodles in front of a green eco-tote bag.
-- Top-Right (Row 1, Col 2): "Paket Sejahtera Bulanan" - A large monthly family grocery bundle featuring 10kg rice sack, two 2L cooking oil pouches, 1kg egg tray, 2kg sugar, coffee, and sweet soy sauce with an order invoice clipboard.
-- Bottom-Left (Row 2, Col 1): "Parsel Hari Raya Ramadhan" - A luxury festive Eid grocery hamper inside an elegant handcrafted woven wicker basket tied with a rich emerald-green and gold satin ribbon bow, filled with premium sembako and festive biscuits.
-- Bottom-Right (Row 2, Col 2): "Paket Dapur Mingguan" - A fresh weekly cooking bundle with 2L cooking oil, 1kg eggs, shallots, garlic, chilies, seasonings, and salt on a clean kitchen wooden board.
+1. Ground Black Coffee 165g: A deep-red and glossy black foil pouch of Indonesian fine ground robusta coffee labeled with gold lettering, accompanied by a small pile of roasted dark coffee beans.
+2. Black Tea Bags Box (30 Bags): A refreshing teal-green rectangular cardboard box of Indonesian black tea bags, beside an elegant clear glass cup of warm amber brewed tea with rising steam.
+3. Sweetened Condensed Milk Can 370g: A classic 370g tin can of condensed milk with a gentle creamy swirl of rich golden-white milk dripping from a silver spoon beside it.
+4. Canned Sardines in Tomato Sauce 425g: A tall glossy crimson-red metal tin can of sardines in rich tomato sauce with metallic pull-ring lid on top.
+5. Instant Fried Noodles (Dus Karton 40 Pcs): A factory-sealed corrugated cardboard delivery box containing 40 packs of Indonesian instant fried noodles, with one individual glossy noodle pack leaning against the box.
 
-Soft warm studio lighting, festive yet clean commercial arrangement, photorealistic 8k, sharp depth of field. --ar 1:1
+Studio e-commerce packshot, bright clean reflections, photorealistic. --ar 1:1
 ```
 
 ---
 
-### BATCH 5: 3 Hero Banner Widescreen 16:9 (Sequence Prompt)
-*Salin prompt ini ke ChatGPT untuk menghasilkan 3 banner hero sekaligus secara berurutan.*
+### BATCH 4: Kebutuhan Rumah Tangga & Pembersih
+*Sabun cuci piring, deterjen, dan bahan kebutuhan harian:*
 
 ```text
-Generate 3 distinct commercial widescreen hero banners (aspect ratio 16:9) sequentially for an Indonesian grocery business website, each with cinematic lighting and 8k photorealistic quality:
+Commercial retail product photo of Indonesian household cleaning essentials on a clean white studio background, crisp softbox lighting, 8k quality, square (1:1):
 
-Banner 1 (Template 1 - Toko Modern):
-Cinematic wide shot (16:9) of a modern, brightly lit Indonesian neighborhood grocery store (warung sembako kekinian). Organized wooden and metal shelves stocked with sacks of rice, cooking oils, eggs, spices, and Indonesian household goods. A friendly Indonesian female shopkeeper in a clean green apron smiling warmly at the checkout counter. Bright, warm, inviting atmosphere.
+1. Lime Dishwashing Liquid 650ml: A standing vibrant lime-green refill pouch of dishwashing liquid featuring fresh juicy sliced lime graphic and clear sparkling water splashes.
+2. Laundry Powder Detergent 770g: A 770g stand-up bag of fragrant laundry powder detergent with bright pink-green floral freshness graphics.
+3. Multi-Purpose Margarine 200g: A bright yellow 200g foil packet of Indonesian multi-purpose cooking margarine, placed next to a golden wooden knife and toasted bread slice.
+4. Gas LPG 3kg Melon: A clean bright-green 3kg Indonesian liquefied petroleum gas cylinder (tabung gas melon 3kg) with official brass valve and seal cap intact.
+5. Mineral Water Gallon 19L: A heavy 19-liter transparent light-blue polycarbonate drinking water jug with blue tamper-evident seal cap and carry handle.
 
-Banner 2 (Template 2 - Gudang Grosir):
-Wide commercial photograph (16:9) of an organized Indonesian grocery wholesale depot (gudang grosir sembako & kulakan). High industrial steel racks stacked neatly with master cartons of instant noodles, sacks of rice on wooden pallets, and cooking oil boxes. A friendly Indonesian worker guiding a hand pallet truck. Bright professional warehouse lighting.
-
-Banner 3 (Template 3 - Layanan Antar Rumah):
-Cinematic commercial photo (16:9) of a grocery home delivery service in suburban Indonesia. A polite delivery courier wearing a neat green polo shirt with "evevsembako" logo, handing an insulated delivery box of fresh groceries to a happy Indonesian homemaker on a sunny house terrace. Warm natural afternoon light.
+Ultra-clean commercial packshot, soft ground shadow, sharp focus. --ar 1:1
 ```
 
 ---
 
-## 2. PANDUAN RUNNING SKRIP PEMOTONG OTOMATIS (`crop_batch.py`)
+### BATCH 5: Grosir & Kulakan Toko (Template 2)
+*Untuk foto partai besar, karung, krat, dan karton dus:*
 
-Setelah Anda men-download gambar dari ChatGPT:
-1. Pindahkan gambar hasil download ke folder `06-sembako-hatbazar/`.
-2. Ubah namanya menjadi `batch-1.png`, `batch-2.png`, `batch-3.png`, atau `batch-4.png`.
-3. Buka terminal PowerShell / Command Prompt di folder `06-sembako-hatbazar/` dan ketik:
-   ```bash
-   python crop_batch.py
-   ```
-4. Output otomatis:
-   - File otomatis terpotong simetris sesuai koordinat grid.
-   - File otomatis di-resize ke resolusi standar **600x600 px**.
-   - File otomatis dikompresi ke format **WebP modern** tanpa mengurangi ketajaman.
-   - File otomatis ditempatkan di `assets/images/evevsembako/` dengan nama yang sesuai kode HTML website (`product_gula_pasir.webp`, `product_tepung_terigu.webp`, dll.).
-   - Website langsung otomatis menampilkan gambar baru tanpa perlu Anda menyunting kode HTML lagi!
+```text
+Commercial wholesale grocery warehouse photography on a clean industrial white studio floor, professional high-key lighting, square (1:1):
+
+1. Rice Sacks 25kg & 50kg: Three heavy stacked woven polypropylene rice sacks labeled "Beras Ramos Super 25 KG Grosir" with industrial stitched top seams.
+2. Master Carton Cooking Oil 6x2L: A sealed corrugated brown cardboard shipping box labeled "Minyak Goreng Karton Pabrik Isi 6 Pouch x 2L" with official factory tape.
+3. Wooden Egg Crate 15kg: A sturdy natural wooden crate filled with 15kg of clean brown farm chicken eggs for grocery store wholesale inventory.
+4. Sugar Sack 50kg: A genuine heavy woven white 50kg sugar refinery sack standing upright with official net weight and industrial refinery stamps.
+5. Coffee Sachet Hanging Strips (100 Sachets): A retail display carton box containing 10 hanging strips (renceng) of instant coffee sachets ready for warung kelontong display.
+
+Crisp industrial commercial packshot, sharp depth of field, authentic Indonesian wholesale packaging. --ar 1:1
+```
+
+---
+
+### BATCH 6: Paket Parsel & Bingkisan Sembako (Template 3)
+*Untuk paket sembako lengkap dan bingkisan hari raya:*
+
+```text
+Commercial gift hamper and grocery bundle photography on a warm white studio background with soft natural lighting, square (1:1):
+
+1. Paket Sembako Berkah: An artfully arranged Indonesian family grocery bundle containing 1 bag of 5kg white rice, 1 pouch of 2L cooking oil, 1kg sugar, 1 box of tea, and 5 instant noodle packs in front of a green reusable tote bag.
+2. Parsel Hari Raya Idul Fitri: A luxury festive Indonesian Eid grocery hamper arranged in a handcrafted woven wicker basket, wrapped in clear cellophane and tied with an elegant emerald-green and gold satin ribbon bow, containing premium syrup, biscuits, and sembako.
+3. Paket Dapur Mingguan: A fresh weekly home-cooking bundle featuring 2L cooking oil, 1kg brown eggs, fresh shallots, garlic, red chilies, seasonings, and salt on a clean kitchen wooden cutting board.
+
+Festive, warm, welcoming commercial food presentation, ultra-realistic 8k. --ar 1:1
+```
+
+---
+
+### BATCH 7: Hero Banner Website 16:9 (Widescreen)
+*Untuk banner bagian paling atas website:*
+
+```text
+Generate 3 distinct commercial widescreen hero banners (aspect ratio 16:9) sequentially for an Indonesian grocery business website, cinematic lighting, 8k photorealistic quality:
+
+Banner 1 (Toko Sembako Modern):
+Cinematic wide shot (16:9) of a modern, clean, brightly lit Indonesian neighborhood grocery store (warung sembako kekinian). Well-organized wooden and metal shelves stocked with sacks of rice, cooking oils, eggs, and groceries. A friendly Indonesian female shopkeeper in a clean green apron smiling warmly at the counter. Warm, bright, inviting atmosphere.
+
+Banner 2 (Gudang Grosir Sembako):
+Wide commercial photograph (16:9) of an organized Indonesian grocery wholesale warehouse. High industrial steel racks stacked neatly with cartons of instant noodles, sacks of rice on pallets, and cooking oil boxes. A friendly Indonesian warehouse worker guiding a hand pallet jack. Bright professional lighting.
+
+Banner 3 (Layanan Antar Rumah):
+Cinematic commercial photo (16:9) of a grocery home delivery service in suburban Indonesia. A delivery courier in a neat green polo shirt delivering an insulated box of fresh groceries and rice to a smiling Indonesian homemaker on a sunny house terrace. Warm natural afternoon light.
+```
