@@ -134,6 +134,4 @@ document.addEventListener("DOMContentLoaded", function () {
       window.open(makeWaUrl(waMessage), "_blank");
     });
   });
-
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${p.nama}!`);
 });

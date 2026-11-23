@@ -655,7 +655,7 @@
      const lenis = new Lenis()
 
      lenis.on('scroll', (e) => {
-       console.log(e)
+       // scroll listener active
      })
 
      function raf(time) {
