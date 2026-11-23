@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Intercept Booking Form
-  const bookingForms = document.querySelectorAll("form.appointment-form, form#appointment-form, form.ltn__car-dealer-form, form[action*='mail.php'], .ltn__appointment-inner form");
+  const bookingForms = document.querySelectorAll("form.appointment-form, form#appointment-form, form.ltn__car-dealer-form, .ltn__appointment-inner form");
   bookingForms.forEach((form) => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -165,5 +165,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${p.nama}!`);
+
 });
