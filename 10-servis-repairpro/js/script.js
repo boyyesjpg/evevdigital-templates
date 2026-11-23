@@ -496,17 +496,22 @@
               form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
               var form_btn_old_msg = form_btn.html();
               form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-              $(form).ajaxSubmit({
-                dataType:  'json',
-                success: function(data) {
-                  if( data.status == 'true' ) {
-                    $(form).find('.form-control').val('');
-                  }
-                  form_btn.prop('disabled', false).html(form_btn_old_msg);
-                  $(form_result_div).html(data.message).fadeIn('slow');
-                  setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+              
+              var waMsg = "Halo evevservis, saya ingin konsultasi servis:\n";
+              $(form).find('input, select, textarea').each(function() {
+                var val = $(this).val();
+                var name = $(this).attr('placeholder') || $(this).attr('name') || '';
+                if (val && $(this).attr('type') !== 'submit' && $(this).attr('type') !== 'button') {
+                  waMsg += "- " + name + ": " + val + "\n";
                 }
               });
+              var waUrl = "https://wa.me/62895323418658?text=" + encodeURIComponent(waMsg);
+              window.open(waUrl, '_blank');
+              
+              form_btn.prop('disabled', false).html(form_btn_old_msg);
+              $(form_result_div).html('✓ Menghubungkan ke WhatsApp konsultan servis...').fadeIn('slow');
+              setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 4000);
+              return false;
             }
         });
     }

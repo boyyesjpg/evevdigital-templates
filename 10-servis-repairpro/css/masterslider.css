@@ -278,7 +278,7 @@
     font-family: sans-serif;
     font-size: 0.75em;
     display: inline-block;
-    background: url(video-close-btn.png) no-repeat 0px 3px;
+    background: url() no-repeat 0px 3px;
     padding-left: 15px;
     height: 15px;
     color: #DBDBDB;

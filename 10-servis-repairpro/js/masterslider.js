@@ -3266,7 +3266,7 @@ window.averta = {};
 		var arrow_w = 15,//parseInt(this.tt_arrow.css('border-left')) + parseInt(this.tt_arrow.css('border-right')),
 			arrow_h = 15;//parseInt(this.tt_arrow.css('border-top'))  + parseInt(this.tt_arrow.css('border-bottom'));
 			
-			//console.log(arrow_h,arrow_w);
+			// log(arrow_h,arrow_w);
 		//
 		switch(this.align){
 			case 'top':
@@ -3384,7 +3384,7 @@ window.averta = {};
 		_super.locate.call(this);
 
 		if ( this.relativeToBG ) {
-			console.log(this.baseOffsetX , this.slide.$bg_img.width()  , this.slide.bgWidth)
+			// log(this.baseOffsetX , this.slide.$bg_img.width()  , this.slide.bgWidth)
 			this.$element[0].style.left = this.baseOffsetX * this.slide.$bg_img.width()  / this.slide.bgWidth + 'px';
 			this.$element[0].style.top  = this.baseOffsetY * this.slide.$bg_img.height() / this.slide.bgHeight + 'px';
 		} 
@@ -4771,7 +4771,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		if ( action in this ){
 			this[action].apply(this, actionParams);
 		} else if ( console ){
-			console.log('Master Slider Error: Action "'+action+'" not found.');
+			// log('Master Slider Error: Action "'+action+'" not found.');
 		}
 	};
 
@@ -5338,7 +5338,7 @@ MSSliderEvent.DESTROY				= 'ms_destroy';
 		this.setupMarkup = this.$element.html();
 
 		if( this.$element.length === 0 ){
-			//if(console) console.log('Master Slider Error: #'+id+' not found.');
+			//if(console) // log('Master Slider Error: #'+id+' not found.');
 			return;
 		}
 
@@ -6027,7 +6027,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	
 	p.horizSwipeMove = function(status){	
 		var phase = status.phase;
-		//console.log(this.loop)
+		// log(this.loop)
 		if(phase === 'start'){
 			this.controller.stop();
 			this.dispatchEvent(new MSViewEvents(MSViewEvents.SWIPE_START, status));		
@@ -6367,7 +6367,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 	p.__updateSlidesHoriz = function(slide , distance){
 		var clc = this.__calculate(distance);
 		slide.$element.css('opacity' , 1-clc.value/300);
-		console.log(window._jcsspfx + 'transform','translateZ('+ -clc.value +'px) rotateY(' + clc.rvalue + 'deg) ')
+		// log(window._jcsspfx + 'transform','translateZ('+ -clc.value +'px) rotateY(' + clc.rvalue + 'deg) ')
 		slide.$element[0].style[window._jcsspfx + 'Transform'] = 'translateZ('+ -clc.value +'px) rotateY(' + clc.rvalue + 'deg) ';
 	};
 	
@@ -7756,7 +7756,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 					.appendTo(this.$element);
 					
 		if(this.slider.options.loop){
-			console.log('WARNING, MSScrollbar cannot work with looped slider.');
+			// log('WARNING, MSScrollbar cannot work with looped slider.');
 			this.disable = true;
 			this.$element.remove();
 		}
@@ -8671,7 +8671,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 			if( images[i].source.indexOf(size + 'x' + size) !== -1 )
 				return images[i].source;
 		}
-      //  console.log(images)
+      //  // log(images)
 		return images[0].source;
 	};
 
@@ -9164,7 +9164,7 @@ MSViewEvents.CHANGE_END	     	= 'slideChangeEnd';
 		if ( target.length === 0 ) {
 			return;
 		}
-		console.log(target.offset().top, duration )
+		// log(target.offset().top, duration )
 
 		if( duration == null ) {
 			duration = 1.4;

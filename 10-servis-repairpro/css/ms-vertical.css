@@ -101,7 +101,7 @@
 	top: 0;
 	height: 15px;
 	cursor: pointer;
-	background: url(arrow.png) no-repeat;
+	/* arrow.png */
 	
     background-position: 50% -106px;
 }
