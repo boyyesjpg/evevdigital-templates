@@ -33,27 +33,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 2. Intercept forms to route directly to WhatsApp
+  // 2. Intercept forms to route directly to WhatsApp with active UX feedback
   document.querySelectorAll('form').forEach(function (form) {
-    if (form.classList.contains('wa-form') || form.id === 'wa-order-form' || form.action.indexOf('search') === -1) {
-      form.addEventListener('submit', function (e) {
-        var action = form.getAttribute('action') || '';
-        if (action.indexOf('.php') !== -1 || action.indexOf('#') !== -1 || action === '' || form.classList.contains('wa-order-form')) {
-          e.preventDefault();
-          var inputs = form.querySelectorAll('input, textarea, select');
-          var pesan = "Halo evevtayler, saya ingin konsultasi/order jahit & vermak pakaian:\n";
-          inputs.forEach(function (input) {
-            var name = input.name || input.placeholder || 'Item';
-            var val = input.value;
-            if (val && input.type !== 'submit' && input.type !== 'button') {
-              pesan += "- " + name + ": " + val + "\n";
-            }
-          });
-          var waUrl = "https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(pesan);
-          window.open(waUrl, '_blank');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var searchInput = form.querySelector('input[type="search"], input[name="search-input"]');
+      if (searchInput && searchInput.value.trim() !== '') {
+        var query = searchInput.value.trim();
+        var waMsg = "Halo evevtayler, saya ingin menanyakan layanan/busana: *" + query + "*. Apakah tersedia?";
+        var searchPopup = document.querySelector('.search-popup');
+        if (searchPopup) {
+          searchPopup.classList.remove('popup-visible');
+        }
+        window.open("https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(waMsg), '_blank');
+        return;
+      }
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var pesan = "Halo evevtayler, saya ingin konsultasi/order jahit & vermak pakaian:\n";
+      inputs.forEach(function (input) {
+        var name = input.name || input.placeholder || 'Item';
+        var val = input.value;
+        if (val && input.type !== 'submit' && input.type !== 'button') {
+          pesan += "- " + name + ": " + val + "\n";
         }
       });
-    }
+      var waUrl = "https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(pesan);
+      window.open(waUrl, '_blank');
+    });
   });
 
   // 3. Smooth scroll for internal links
