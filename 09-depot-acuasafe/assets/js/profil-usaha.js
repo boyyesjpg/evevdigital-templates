@@ -33,9 +33,29 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 2. Intercept forms to route directly to WhatsApp
+  // 2. Intercept forms to route directly to WhatsApp (exclude search & #contact-form handled by validate)
   document.querySelectorAll('form').forEach(function (form) {
-    if (form.classList.contains('wa-form') || form.id === 'wa-order-form' || form.action.indexOf('search') === -1) {
+    if (form.classList.contains('search-form') || form.querySelector('input[type="search"]')) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var searchInput = form.querySelector('input[type="search"]');
+        var query = searchInput ? searchInput.value.trim() : '';
+        var targetSection = document.getElementById('produk') || document.getElementById('layanan');
+        if (targetSection) {
+          targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        var info = form.querySelector('.search-feedback');
+        if (!info) {
+          info = document.createElement('div');
+          info.className = 'search-feedback text-success';
+          info.style.fontSize = '12px';
+          info.style.marginTop = '6px';
+          form.appendChild(info);
+        }
+        info.textContent = query ? 'Menampilkan hasil untuk: "' + query + '"' : 'Menampilkan daftar produk & layanan...';
+        setTimeout(function () { if (info && info.parentNode) info.parentNode.removeChild(info); }, 3500);
+      });
+    } else if (form.id !== 'contact-form' && (form.classList.contains('wa-form') || form.id === 'wa-order-form' || form.action.indexOf('search') === -1)) {
       form.addEventListener('submit', function (e) {
         var action = form.getAttribute('action') || '';
         if (action.indexOf('.php') !== -1 || action.indexOf('#') !== -1 || action === '' || form.classList.contains('wa-order-form')) {
@@ -70,5 +90,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-  console.log('[EvEvDigital Engine] Auto-hydration complete for evevdepot!');
+  // auto-hydration complete
 });

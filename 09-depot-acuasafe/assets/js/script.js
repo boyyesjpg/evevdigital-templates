@@ -110,6 +110,40 @@
 				message: {
 					required: true
 				}
+			},
+			submitHandler: function(form) {
+				var $form = $(form);
+				var form_btn = $form.find('button[type="submit"]');
+				var old_btn_text = form_btn.html();
+				form_btn.prop('disabled', true).html('Menghubungkan ke WA...');
+				
+				var name = $form.find('[name="username"]').val() || '';
+				var email = $form.find('[name="email"]').val() || '';
+				var phone = $form.find('[name="phone"]').val() || '';
+				var subject = $form.find('[name="subject"]').val() || '';
+				var message = $form.find('[name="message"]').val() || '';
+				
+				var waMsg = "Halo evevdepot, saya ingin konsultasi/pesan air galon:\n" +
+				            "- Nama: " + name + "\n" +
+				            "- Email: " + email + "\n" +
+				            "- No. HP: " + phone + "\n" +
+				            "- Subjek: " + subject + "\n" +
+				            "- Pesan: " + message;
+				            
+				var waUrl = "https://wa.me/62895323418658?text=" + encodeURIComponent(waMsg);
+				window.open(waUrl, '_blank');
+				
+				var form_result = $('<div class="alert alert-success" style="margin-top:15px;">✓ Pesan berhasil disiapkan! Mengalihkan ke WhatsApp...</div>');
+				$form.find('#contact-form-result').remove();
+				form_result.attr('id', 'contact-form-result');
+				$form.append(form_result);
+				
+				setTimeout(function() {
+					form_btn.prop('disabled', false).html(old_btn_text);
+					form_result.fadeOut('slow', function() { $(this).remove(); });
+					form.reset();
+				}, 4000);
+				return false;
 			}
 		});
 	}
