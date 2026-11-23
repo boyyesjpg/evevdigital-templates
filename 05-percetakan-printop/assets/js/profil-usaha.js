@@ -148,8 +148,8 @@ document.addEventListener("DOMContentLoaded", function () {
     a.setAttribute("rel", "noopener noreferrer");
   });
 
-  // Intercept Order Form
-  const orderForms = document.querySelectorAll("form.order-form, form.contact-form, form[action*='mail.php'], .get-started-form form");
+  // Intercept Order & Contact Form
+  const orderForms = document.querySelectorAll("form.order-form, form.contact-form, form.form-submit:not(.tw-mt-6), .get-started-form form");
   orderForms.forEach((form) => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -176,5 +176,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${p.nama}!`);
+  // Intercept Newsletter Form with User Feedback
+  const newsletterForms = document.querySelectorAll("form.tw-mt-6");
+  newsletterForms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = form.querySelector('input[type="email"]');
+      const email = emailInput ? emailInput.value : "";
+      const submitBtn = form.querySelector('button[type="submit"]');
+      if (submitBtn) {
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "<span>✓ Terdaftar!</span>";
+        setTimeout(() => {
+          submitBtn.innerHTML = originalText;
+        }, 3000);
+      }
+      alert(`Terima kasih! Email (${email || "Anda"}) berhasil didaftarkan untuk info promo & diskon cetak ${p.nama}.`);
+      if (emailInput) emailInput.value = "";
+    });
+  });
+
+  // Intercept Search Form
+  const searchForms = document.querySelectorAll("form.max-w-810-px, form.max-w-330-px");
+  searchForms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const searchInput = form.querySelector('input[type="text"], input[type="search"]');
+      const query = searchInput ? searchInput.value.trim() : "";
+      if (query) {
+        const waMsg = `Halo ${p.nama}, saya ingin menanyakan ketersediaan produk/layanan: "${query}". Apakah tersedia?`;
+        window.open(makeWaUrl(waMsg), "_blank");
+      } else {
+        const prodSec = document.getElementById("produk");
+        if (prodSec) {
+          prodSec.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
+  });
+
+  // Auto-hydration complete
 });
