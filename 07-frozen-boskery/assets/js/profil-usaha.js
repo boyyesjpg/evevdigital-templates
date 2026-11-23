@@ -33,27 +33,57 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  // 2. Intercept forms to route directly to WhatsApp
+  // 2. Intercept forms with interactive UX feedback & WhatsApp routing
   document.querySelectorAll('form').forEach(function (form) {
-    if (form.classList.contains('wa-form') || form.id === 'wa-order-form' || form.action.indexOf('search') === -1) {
-      form.addEventListener('submit', function (e) {
-        var action = form.getAttribute('action') || '';
-        if (action.indexOf('.php') !== -1 || action.indexOf('#') !== -1 || action === '' || form.classList.contains('wa-order-form')) {
-          e.preventDefault();
-          var inputs = form.querySelectorAll('input, textarea, select');
-          var pesan = "Halo evevfrozen, saya ingin memesan produk frozen food:\n";
-          inputs.forEach(function (input) {
-            var name = input.name || input.placeholder || 'Item';
-            var val = input.value;
-            if (val && input.type !== 'submit' && input.type !== 'button') {
-              pesan += "- " + name + ": " + val + "\n";
-            }
-          });
-          var waUrl = "https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(pesan);
-          window.open(waUrl, '_blank');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Case A: Newsletter Form
+      if (form.classList.contains('mc-form') || form.querySelector('input[type="email"]')) {
+        var emailInput = form.querySelector('input[type="email"]');
+        var email = emailInput ? emailInput.value.trim() : "";
+        var submitBtn = form.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          var originalContent = submitBtn.innerHTML;
+          submitBtn.innerHTML = "✓ Terdaftar!";
+          setTimeout(function () {
+            submitBtn.innerHTML = originalContent;
+          }, 3000);
+        }
+        alert("Terima kasih! Email (" + (email || "Anda") + ") berhasil didaftarkan untuk promo produk frozen food " + PROFIL_USAHA.nama + ".");
+        if (emailInput) emailInput.value = "";
+        return;
+      }
+
+      // Case B: Search Form
+      if (form.classList.contains('search-popup__form') || form.getAttribute('role') === 'search') {
+        var searchInput = form.querySelector('input[type="search"], input[name="s"], input[type="text"]');
+        var query = searchInput ? searchInput.value.trim() : "";
+        if (query) {
+          var waMsg = "Halo " + PROFIL_USAHA.nama + ", apakah stok produk frozen food: \"" + query + "\" tersedia?";
+          window.open("https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(waMsg), '_blank');
+        } else {
+          var shopEl = document.querySelector('#shop, #produk');
+          if (shopEl) {
+            shopEl.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+        return;
+      }
+
+      // Case C: Order / Contact Form
+      var inputs = form.querySelectorAll('input, textarea, select');
+      var pesan = "Halo " + PROFIL_USAHA.nama + ", saya ingin memesan produk frozen food:\n";
+      inputs.forEach(function (input) {
+        var name = input.name || input.placeholder || 'Item';
+        var val = input.value;
+        if (val && input.type !== 'submit' && input.type !== 'button') {
+          pesan += "- " + name + ": " + val + "\n";
         }
       });
-    }
+      var waUrl = "https://wa.me/" + PROFIL_USAHA.whatsapp + "?text=" + encodeURIComponent(pesan);
+      window.open(waUrl, '_blank');
+    });
   });
 
   // 3. Smooth scroll for internal links
@@ -70,5 +100,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-  console.log('[EvEvDigital Engine] Auto-hydration complete for evevfrozen!');
+  // Auto-hydration complete
 });
