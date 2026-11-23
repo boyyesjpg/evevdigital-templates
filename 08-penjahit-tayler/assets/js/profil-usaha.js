@@ -70,5 +70,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
   
-  console.log('[EvEvDigital Engine] Auto-hydration complete for evevtayler!');
+  // Auto-hydration complete
 });
