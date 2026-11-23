@@ -1,0 +1,10 @@
+# Vercel Ignore
+node_modules
+_archive_drafts
+audit-templates.ps1
+audit-report.md
+audit-report.json
+.git
+.vscode
+*.tmp
+*.log
