@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Intercept Booking Form
-  const bookingForms = document.querySelectorAll("form.appointment-form, form#appointment-form, form[action*='mail.php'], form.booking-form");
+  const bookingForms = document.querySelectorAll("form.appointment-form, form#appointment-form, form.booking-form");
   bookingForms.forEach((form) => {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
@@ -160,5 +160,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  console.log(`[EvEvDigital Engine] Auto-hydration complete for ${p.nama}!`);
+  // Intercept Newsletter Form
+  const newsletterForms = document.querySelectorAll("form.newsletter-form");
+  newsletterForms.forEach((form) => {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const emailInput = form.querySelector('input[type="email"], input[placeholder*="Email"]');
+      const email = emailInput ? emailInput.value : "";
+      let waMessage = `*NEWSLETTER / PROMO BENGKEL*\n\n`;
+      waMessage += `Halo ${p.nama}, saya ingin berlangganan info promo dan jadwal servis berkala via email: ${email}\n\nTerima kasih!`;
+      window.open(makeWaUrl(waMessage), "_blank");
+    });
+  });
 });
