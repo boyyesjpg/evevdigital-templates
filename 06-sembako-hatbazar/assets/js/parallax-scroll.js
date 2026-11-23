@@ -35,7 +35,7 @@ var ParallaxScroll = {
 
     /* PRIVATE FUNCTIONS */
     _log: function(message) {
-        if (this.showLogs) // log cleared
+        if (this.showLogs) { /* silenced */ }
     },
     _onScroll: function(noSmooth) {
         var scroll = jQuery(document).scrollTop();
